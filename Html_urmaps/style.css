@@ -1,0 +1,50 @@
+/* Estilo general para el header*/
+.Nav-titulo {
+    background-color: #666363; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Nav-titulo .navbar-brand {
+    margin: 0; 
+    text-align: center;
+    position: absolute;
+    left: 50%; 
+    top: 2%;
+    transform: translateX(-50%);
+    font-size: 40px;
+    font-family: "Varela Round", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffffff;
+}
+
+/* Estilo para el boton del Lenguje */
+.dropdown-center {
+    position: absolute;
+    top: 25px;
+    right: 40px;
+    background-color: #666363;
+    width: 70px;
+    height: 70px;
+    font-size: 25px;
+}
+
+.btn-secondary {
+    background-color: #666363; 
+    border-color: #666363; 
+    color: #ffffff; 
+}
+
+.dropdown-menu{
+    background-color: #666363;
+    font-size: 16px; 
+    min-width: 50px; 
+    max-height: 50px; 
+    overflow-y: auto;
+}
+
+ul.dropdown-menu li a {
+    color: #ffffff !important;
+}
