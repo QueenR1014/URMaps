@@ -133,12 +133,12 @@ menu {
 /* aqui es todo lo de los botones */
 .search-social {
     text-align: right; /* Alinea los elementos a la derecha */
-    margin-top: 2%;
+    margin-top: 20px;
 }
 
 .search-social input {
     width: auto; 
-    margin-right: 2%; 
+    margin-right: 10px; 
 }
 
 .social-icons {
@@ -146,15 +146,15 @@ menu {
 }
 
 .social-icons .btn {
-    margin: 0.5%; 
+    margin: 0.5px; 
     background-color: transparent; 
     border: none; 
 }
 
 .social-icons .btn img {
-    width: 5%; 
-    height: auto;
+    width: 40px; 
+    height: 40px;
     border-radius: 50%; 
     background-color: #D6D6D6; 
-    padding: 1%; 
+    padding: 8px; 
 }
