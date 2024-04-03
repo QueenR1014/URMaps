@@ -4,17 +4,23 @@ console.log("######################");
 const mapGraph = [['A', 'B', 5], ['A', 'E', 7], ['B', 'C', 3], ['C', 'D', 2], ['D', 'G', 4], ['G', 'F', 1], ['F', 'E', 2], ['D', 'H', 6], ['H', 'I', 3], ['H', 'J', 5]];
 
 const coordinates = {
-    'A': { x: 100, y: 100 },
-    'B': { x: 200, y: 100 },
-    'C': { x: 300, y: 150 },
-    'D': { x: 400, y: 200 },
-    'E': { x: 500, y: 200 },
-    'F': { x: 450, y: 300 },
-    'G': { x: 350, y: 300 },
-    'H': { x: 300, y: 400 },
-    'I': { x: 250, y: 500 },
-    'J': { x: 200, y: 600 }
+    'A': { x: 127, y: 444 },
+    'B': { x: 209, y: 444 },
+    'C': { x: 211, y: 350 },
+    'D': { x: 211, y: 296 },
+    'E': { x: 50,  y: 444 },
+    'F': { x: 50,  y: 333 },
+    'G': { x: 50, y: 296 },
+    'H': { x: 211, y: 260 },
+    'I': { x: 249, y: 260 },
+    'J': { x: 100, y: 260 }
 };
+
+const names = [ ['A', 'Entrada'], ['B', 'Escalera Caldas'], 
+                ['C', 'Baños Carrasquilla'], ['D', 'Entrada Teatrino'], 
+                ['E', 'Museo Rosarista'], ['F', 'Aula Mutis'], 
+                ['G','La Bordadita'], ['H','Cuenteros'], 
+                ['I', 'Escaleras Casur'], ['J','Comedor']];   
 
 const pathElement = document.getElementById('path');
 
