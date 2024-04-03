@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa con Camino</title>
+    <link rel="stylesheet" href="prueba.css">
+</head>
+<body>
+    <div id="map-container">
+        <img src="Mapa.png" alt="Mapa">
+        <div id="path"></div>
+    </div>
+
+    <form id="pathForm">
+        <label for="startNode">Nodo de inicio:</label>
+        <select id="startNode">
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+            <option value="E">E</option>
+            <option value="F">F</option>
+            <option value="G">G</option>
+            <option value="H">H</option>
+            <option value="I">I</option>
+            <option value="J">J</option>
+        </select>
+    
+        <label for="endNode">Nodo de destino:</label>
+        <select id="endNode">
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+            <option value="E">E</option>
+            <option value="F">F</option>
+            <option value="G">G</option>
+            <option value="H">H</option>
+            <option value="I">I</option>
+            <option value="J">J</option>
+        </select>
+    
+        <button type="submit">Buscar ruta</button>
+    </form>
+    
+    <script src="prueba.js"></script>
+</body>
+</html>
