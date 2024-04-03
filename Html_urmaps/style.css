@@ -65,6 +65,11 @@ aside {
     background-color: #BA0620;
 }
 
+.Button img {
+    max-width: 100%;
+    height: auto;
+}
+
 /* Desplejable de las opciones*/ 
 .Button .dropdown-content {
     display: none;
