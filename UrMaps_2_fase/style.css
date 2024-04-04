@@ -183,6 +183,10 @@ menu {
     height: auto; /* Ensure the image maintains its aspect ratio */
 }
 
+#path{
+    position: relative;
+}
+
 #pathForm {
     position: absolute;
     bottom: 20px; /* Adjust the distance from the bottom as needed */
@@ -195,6 +199,7 @@ menu {
 }
 
 /* Styles for form elements */
+
 #pathForm form {
     display: flex;
     flex-direction: column;
@@ -207,7 +212,7 @@ menu {
 }
 
 #pathForm button {
-    background-color: #007bff; /* Example color */
+    background-color: #007bff; 
     color: #fff;
     border: none;
     padding: 8px 16px;
@@ -216,6 +221,5 @@ menu {
 }
 
 #pathForm button:hover {
-    background-color: #0056b3; /* Example color on hover */
+    background-color: #0056b3; 
 }
-
