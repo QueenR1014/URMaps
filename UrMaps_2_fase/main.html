@@ -20,7 +20,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ropa+Sans&family=Varela+Round&display=swap" rel="stylesheet">
-
+    <!--<script src = "map_script.js"></script>-->
 </head>
 
 <body>
@@ -139,6 +139,40 @@
             <section class="centered-image">
                 <img src="Mapa.png" alt="" width="700px" height="700px">
             </section>
+            <form id="pathForm">
+                <!--<label for="startNode">Nodo de inicio:</label>
+                <select id="startNode">
+                    <option value="A">Entrada</option>
+                    <option value="B">Escalera Caldas</option>
+                    <option value="C">Baños Carrasquilla</option>
+                    <option value="D">Entrada Teatrino</option>
+                    <option value="E">Museo Rosarista</option>
+                    <option value="F">Aula Mutis</option>
+                    <option value="G">La Bordadita</option>
+                    <option value="H">Cuenteros</option>
+                    <option value="I">Escaleras Casur</option>
+                    <option value="J">Comedor</option>
+                </select>-->
+                
+                <label for="endNode">Destino:</label>
+                <select id="endNode">
+                    <option value="A">Entrada</option>
+                    <option value="B">Escalera Caldas</option>
+                    <option value="C">Baños Carrasquilla</option>
+                    <option value="D">Entrada Teatrino</option>
+                    <option value="E">Museo Rosarista</option>
+                    <option value="F">Aula Mutis</option>
+                    <option value="G">La Bordadita</option>
+                    <option value="H">Cuenteros</option>
+                    <option value="I">Escaleras Casur</option>
+                    <option value="J">Comedor</option>
+                </select>
+                
+            
+                <button type="submit">Buscar ruta</button>
+            </form>
+            
+            <script src="map_script.js"></script>
         </div>
 
     </main>

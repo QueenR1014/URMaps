@@ -26,6 +26,18 @@ const pathElement = document.getElementById('path');
 
 const form = document.getElementById('pathForm');
 
+/*names.forEach(([nodeName, nodeDescription]) => {
+    const optionStart = document.createElement('option');
+    optionStart.value = nodeName;
+    optionStart.textContent = `${nodeName} - ${nodeDescription}`;
+    startNodeSelect.appendChild(optionStart);
+
+    const optionEnd = document.createElement('option');
+    optionEnd.value = nodeName;
+    optionEnd.textContent = `${nodeName} - ${nodeDescription}`;
+    endNodeSelect.appendChild(optionEnd);
+});*/
+
 form.addEventListener('submit', function(event) {
     event.preventDefault(); // Evita que el formulario se envíe
 
