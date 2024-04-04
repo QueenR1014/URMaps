@@ -1,78 +1,5 @@
 'use strict'
-
-const mapGraph = [  ['A', 'B', 5], ['A', 'E', 7], 
-                    ['B', 'C', 3], ['C', 'D', 2], 
-                    ['D', 'G', 4], ['G', 'F', 1], 
-                    ['F', 'E', 2], ['D', 'H', 6], 
-                    ['H', 'I', 3], ['H', 'J', 5]];
-
-
-const coordinates = {
-    "A": { "x": 177, "y": 1144},
-    "B": {"x": 259,"y": 1144},
-    "C": {"x": 261,"y": 1050},
-    "D": {"x": 261,"y": 996},
-    "E": {"x": 100,"y": 1144},
-    "F": {"x": 100,"y": 1033},
-    "G": {"x": 100,"y": 996},
-    "H": {"x": 261,"y": 960},
-    "I": {"x": 299,"y": 960},
-    "J": {"x": 150,"y": 960}
-}
-
-
-const names = [ ['A', 'Entrada'], ['B', 'Escalera Caldas'], 
-                ['C', 'Baños Carrasquilla'], ['D', 'Entrada Teatrino'], 
-                ['E', 'Museo Rosarista'], ['F', 'Aula Mutis'], 
-                ['G','La Bordadita'], ['H','Cuenteros'], 
-                ['I', 'Escaleras Casur'], ['J','Comedor']];   
-
-const pathElement = document.getElementById('path');
-
-const form = document.getElementById('pathForm');
-
-/*names.forEach(([nodeName, nodeDescription]) => {
-    const optionStart = document.createElement('option');
-    optionStart.value = nodeName;
-    optionStart.textContent = `${nodeName} - ${nodeDescription}`;
-    startNodeSelect.appendChild(optionStart);
-
-    const optionEnd = document.createElement('option');
-    optionEnd.value = nodeName;
-    optionEnd.textContent = `${nodeName} - ${nodeDescription}`;
-    endNodeSelect.appendChild(optionEnd);
-});*/
-
-form.addEventListener('submit', function(event) {
-    event.preventDefault(); // Evita que el formulario se envíe
-
-    //const startNode = document.getElementById('startNode').value;
-    const startNode = 'A'
-    const endNode = document.getElementById('endNode').value;
-
-    // Llama a tu función dijkstra con los nodos de inicio y destino
-    const { path, distance } = dijkstra(mapGraph, startNode, endNode);
-
-    // Borra cualquier punto existente en el camino
-    pathElement.innerHTML = '';
-
-    // Dibuja el nuevo camino si existe
-    if (path) {
-        path.forEach(node => {
-            const pointElement = document.createElement('div');
-            pointElement.className = 'point';
-            pointElement.style.left = `${coordinates[node].x}px`;
-            pointElement.style.top = `${coordinates[node].y}px`;
-            pathElement.appendChild(pointElement);
-        });
-
-        console.log('Shortest Path:', path);
-        console.log('Shortest Distance:', distance);
-    } else {
-        console.log('No hay camino disponible entre los nodos seleccionados.');
-    }
-});
-
+//Algoritmo de búsqueda de camino
 class PriorityQueue {
     constructor() {
         this.queue = [];
@@ -190,3 +117,76 @@ if (path) {
 
     return null; // Path not found
 }
+
+const mapGraph = [  ['A', 'B', 5], ['A', 'E', 7], 
+                    ['B', 'C', 3], ['C', 'D', 2], 
+                    ['D', 'G', 4], ['G', 'F', 1], 
+                    ['F', 'E', 2], ['D', 'H', 6], 
+                    ['H', 'I', 3], ['H', 'J', 5]];
+
+
+const coordinates = {
+    "A": { "x": 177, "y": 1144},
+    "B": {"x": 259,"y": 1144},
+    "C": {"x": 261,"y": 1050},
+    "D": {"x": 261,"y": 996},
+    "E": {"x": 100,"y": 1144},
+    "F": {"x": 100,"y": 1033},
+    "G": {"x": 100,"y": 996},
+    "H": {"x": 261,"y": 960},
+    "I": {"x": 299,"y": 960},
+    "J": {"x": 150,"y": 960}
+}
+
+
+const names = [ ['A', 'Entrada'], ['B', 'Escalera Caldas'], 
+                ['C', 'Baños Carrasquilla'], ['D', 'Entrada Teatrino'], 
+                ['E', 'Museo Rosarista'], ['F', 'Aula Mutis'], 
+                ['G','La Bordadita'], ['H','Cuenteros'], 
+                ['I', 'Escaleras Casur'], ['J','Comedor']];   
+
+
+//Manejo formulario
+//creación del evento
+document.addEventListener('DOMContentLoaded',function(){
+    //Aseguramos la carga del formulario
+    const pathElement = document.getElementById('path');
+
+    //Obtenemos el objeto del formulario
+    const form = document.getElementById('pathForm');
+
+        
+    if(pathElement){
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita que el formulario se envíe
+
+            //const startNode = document.getElementById('startNode').value;
+            const startNode = 'A'
+            const endNode = document.getElementById('endNode').value;
+
+            // Llama a tu función dijkstra con los nodos de inicio y destino
+            const { path, distance } = dijkstra(mapGraph, startNode, endNode);
+
+            // Borra cualquier punto existente en el camino
+            pathElement.innerHTML = '';
+
+            // Dibuja el nuevo camino si existe
+            if (path) {
+                path.forEach(node => {
+                    const pointElement = document.createElement('div');
+                    pointElement.className = 'point';
+                    pointElement.style.left = `${coordinates[node].x}px`;
+                    pointElement.style.top = `${coordinates[node].y}px`;
+                    pathElement.appendChild(pointElement);
+                });
+
+                console.log('Shortest Path:', path);
+                console.log('Shortest Distance:', distance);
+            } else {
+                console.log('No hay camino disponible entre los nodos seleccionados.');
+            }
+        });
+    }else{
+        console.error('pathElement not found or initialized')
+    }
+});
