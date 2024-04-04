@@ -119,7 +119,7 @@ if (path) {
 }
 
 //variable de control demo
-var currentMediaType = 'image';
+//var currentMediaType = 'image';
 const mapGraph = [  ['A', 'B', 5], ['A', 'E', 7], 
                     ['B', 'C', 3], ['C', 'D', 2], 
                     ['D', 'G', 4], ['G', 'F', 1], 
@@ -158,7 +158,7 @@ function replaceImage(newPath){
     }
 }
 
-
+/*
 function toggleMedia() {
     var imageElement = document.getElementById('mapa');
     var videoElement = document.getElementById('media-video');
@@ -173,7 +173,7 @@ function toggleMedia() {
       currentMediaType = 'image';
     }
   }
-
+*/
 
 //Manejo formulario
 //creación del evento
@@ -195,10 +195,10 @@ form.addEventListener('submit', function(event){
         console.log(distance);
 
         //Demo - reemplazo imagen
-        if(endNode == 'J' && currentMediaType == "image"){
-            toggleMedia();
-        }else if(currentMediaType == "video"){
-            toggleMedia();
+        if(endNode == 'J'){
+            replaceImage("J_path.gif");
+        }else{
+            replaceImage("Mapa.png");
         }
     }else{
         console.log('Camino no encontrado');
