@@ -1,3 +1,12 @@
+
+#path {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 /* Estilo general para el header*/
 .Nav-titulo {
     background-color: #666363; 
@@ -40,7 +49,7 @@
 .dropdown-menu{
     background-color: #666363;
     font-size: 16px; 
-    min-width: 50px; 
+    min-width: 600px; 
     max-height: 50px; 
     overflow-y: auto;
 }
@@ -52,10 +61,11 @@ ul.dropdown-menu li a {
 /* Config Aside */
 aside {
     text-align: center;
-    width: 7%;
+    width: 7% auto;
     height: 100%;
     background-color: #BA0620;
     position: absolute;
+    min-width: 60px;
 }
 
 /* Espaciado entre botones*/ 

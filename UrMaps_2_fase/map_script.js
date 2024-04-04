@@ -42,11 +42,12 @@ const form = document.getElementById('pathForm');
     optionEnd.textContent = `${nodeName} - ${nodeDescription}`;
     endNodeSelect.appendChild(optionEnd);
 });*/
-/*
+
 form.addEventListener('submit', function(event) {
     event.preventDefault(); // Evita que el formulario se envíe
 
-    const startNode = document.getElementById('startNode').value;
+    //const startNode = document.getElementById('startNode').value;
+    const startNode = 'A'
     const endNode = document.getElementById('endNode').value;
 
     // Llama a tu función dijkstra con los nodos de inicio y destino
@@ -70,7 +71,7 @@ form.addEventListener('submit', function(event) {
     } else {
         console.log('No hay camino disponible entre los nodos seleccionados.');
     }
-});*/
+});
 
 class PriorityQueue {
     constructor() {
