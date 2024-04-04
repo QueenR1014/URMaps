@@ -8,6 +8,8 @@
 }
 
 /* Estilo general para el header*/
+
+
 .Nav-titulo {
     background-color: #666363; 
     display: flex;
@@ -29,6 +31,9 @@
     color: #F2F2F2;
 }
 
+#logoU {
+    text-align: left;   
+}
 /* Estilo para el boton del Lenguje */
 .dropdown-center {
     position: absolute;
