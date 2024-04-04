@@ -145,48 +145,44 @@ const names = [ ['A', 'Entrada'], ['B', 'Escalera Caldas'],
                 ['G','La Bordadita'], ['H','Cuenteros'], 
                 ['I', 'Escaleras Casur'], ['J','Comedor']];   
 
+//reemplazo de imagen
+
+function replaceImage(newPath){
+    var imageElement = document.getElementById("mapa");
+    if(imageElement){
+        console.log('loaded image');
+        imageElement.src = newPath;
+        imageElement.alt = "mapa actualizado mostrando camino";
+    }
+}
+
 
 //Manejo formulario
 //creación del evento
-document.addEventListener('DOMContentLoaded',function(){
-    //Aseguramos la carga del formulario
-    const pathElement = document.getElementById('path');
 
-    //Obtenemos el objeto del formulario
-    const form = document.getElementById('pathForm');
+var form = document.getElementById('pathForm');
 
-        
-    if(pathElement){
-        form.addEventListener('submit', function(event) {
-            event.preventDefault(); // Evita que el formulario se envíe
+form.addEventListener('submit', function(event){
+    event.preventDefault(); // prevents autosubmitting
 
-            //const startNode = document.getElementById('startNode').value;
-            const startNode = 'A'
-            const endNode = document.getElementById('endNode').value;
+    const startNode = 'A';
+    let endNode = document.getElementById('endNode').value;
+    console.log(endNode);
 
-            // Llama a tu función dijkstra con los nodos de inicio y destino
-            const { path, distance } = dijkstra(mapGraph, startNode, endNode);
+    let {path, distance} = dijkstra(mapGraph, startNode, endNode);
 
-            // Borra cualquier punto existente en el camino
-            pathElement.innerHTML = '';
+    if(path){
+        //checkeo de información
+        console.log(path);
+        console.log(distance);
 
-            // Dibuja el nuevo camino si existe
-            if (path) {
-                path.forEach(node => {
-                    const pointElement = document.createElement('div');
-                    pointElement.className = 'point';
-                    pointElement.style.left = `${coordinates[node].x}px`;
-                    pointElement.style.top = `${coordinates[node].y}px`;
-                    pathElement.appendChild(pointElement);
-                });
-
-                console.log('Shortest Path:', path);
-                console.log('Shortest Distance:', distance);
-            } else {
-                console.log('No hay camino disponible entre los nodos seleccionados.');
-            }
-        });
+        //Demo - reemplazo imagen
+        if(endNode == 'J'){
+            replaceImage('sonic.jpg');
+        }else{
+            replaceImage('Mapa.png');
+        }
     }else{
-        console.error('pathElement not found or initialized')
+        console.log('Camino no encontrado');
     }
 });
