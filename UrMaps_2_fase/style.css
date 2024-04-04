@@ -128,13 +128,14 @@ menu {
     text-align: center;
     margin-top: 50px;
     margin-left: 700px;
-}
+  }
 
-.centered-image img {
+  .centered-image img,
+  .centered-image video {
     max-width: 100%;
     height: auto;
-    min-width: 200px;
-}
+    min-width: 300px;
+  }
 
 .content-wrapper {
     display: flex;
