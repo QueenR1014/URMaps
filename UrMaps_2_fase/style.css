@@ -67,7 +67,6 @@ aside {
     height: 100%;
     background-color: #BA0620;
     position: fixed;
-    z-index: 100;
 }
 
 .container-fluid {
@@ -104,53 +103,14 @@ aside {
 }
 
 /* Desplejable de las opciones*/ 
-/* Estilo para el desplegable */
 .Button .dropdown-content {
     display: none;
     position: absolute;
     background-color: #666363;
+    top: 100%;
     min-width: 160px;
-    left: calc(100% + 10px); /* Posiciona el desplegable a la derecha del botón */
-    top: 50%; /* Posiciona el desplegable en el centro vertical del botón */
-    transform: translateY(-50%);
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-/* Triángulo para simular el guion */
-.Button .dropdown-content::before {
-    content: "";
-    position: absolute;
-    top: 50%; /* Posiciona la punta en el centro vertical del desplegable */
-    right: 100%; /* Posiciona la punta a la izquierda del desplegable */
-    border-width: 8px; /* Tamaño del triángulo */
-    border-style: solid;
-    border-color: transparent transparent transparent #666363; /* Color del triángulo */
-    transform: translateY(-50%);
-}
-
-/* Estilo para los elementos dentro del desplegable */
-.Button .dropdown-content a {
-    display: block;
-    padding: 8px 16px;
-    text-decoration: none;
-    color: #F2F2F2;
-}
-
-/* Color de fondo al pasar el cursor sobre las opciones */
-.Button .dropdown-content a:hover {
-    background-color: #555;
-}
-
-/* Muestra el desplegable cuando se enfoca el botón */
-.Button .btn:focus + .dropdown-content {
-    display: block;
-}
-
-.Button .dropdown-content.active {
-    display: block; /* Muestra el desplegable cuando tiene la clase 'active' */
-    opacity: 1; /* Cambia la opacidad a 1 para hacer visible el desplegable */
+    left: calc(100% + 10px); /* Posiciona el desplegable a la derecha del botón con un margen de 10px */
+    top: calc(20% + 10px); /* Posiciona el desplegable debajo del botón, puedes ajustar el 10px según sea necesario */
 }
 
 /* Deplejable para todas las opciones que pueda tener un boton */ 
@@ -259,7 +219,7 @@ menu {
 }
 #pathForm {
     position: absolute;
-    top: 20% !important; /* Posición desde la parte inferior del botón */
+    top: 100%; /* Posición desde la parte inferior del botón */
     left: 80%;
     transform: translateX(-50%);
     background-color: #F2F2F2;
@@ -299,7 +259,6 @@ menu {
 }
 
 
-/*styles for carousel*/
 
 #carouselExample {
     margin-top: 10%;
@@ -318,4 +277,3 @@ menu {
     height: 100%;
     object-fit: cover; /* Ensure images maintain aspect ratio and cover the entire carousel item */
 }
-
