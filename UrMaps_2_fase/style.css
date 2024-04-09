@@ -302,6 +302,7 @@ menu {
 /*styles for carousel*/
 
 #carouselExample {
+    margin-top: 10%;
     margin-left: 7%;
     z-index: 20;
 }
