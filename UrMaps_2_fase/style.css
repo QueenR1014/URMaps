@@ -8,8 +8,6 @@
 }
 
 /* Estilo general para el header*/
-
-
 .Nav-titulo {
     background-color: #666363; 
     display: flex;
@@ -31,9 +29,6 @@
     color: #F2F2F2;
 }
 
-#logoU {
-    text-align: left;   
-}
 /* Estilo para el boton del Lenguje */
 .dropdown-center {
     position: absolute;
@@ -66,11 +61,38 @@ ul.dropdown-menu li a {
 /* Config Aside */
 aside {
     text-align: center;
-    width: 7% auto;
+    width: 7%;
+    min-width: 60px; /* Ancho mínimo de 60px */
+    max-width: 15%; /* Ancho máximo relativo al tamaño de la pantalla */
     height: 100%;
     background-color: #BA0620;
-    position: absolute;
-    min-width: 60px;
+    position: fixed;
+}
+
+.container-fluid {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Estilo para los botones dentro del aside */
+.Button {
+    width: 100%; 
+    padding: 10px 0; 
+}
+
+/* Estilo para los botones dentro del aside */
+.Button .btn {
+    width: 70%; 
+    height: auto; 
+    margin: 0 auto; 
+    display: block; 
+}
+
+/* Estilo para las imágenes dentro de los botones */
+.Button img {
+    width: 100%; 
+    height: auto; 
 }
 
 /* Espaciado entre botones*/ 
@@ -81,13 +103,53 @@ aside {
 }
 
 /* Desplejable de las opciones*/ 
+/* Estilo para el desplegable */
 .Button .dropdown-content {
     display: none;
     position: absolute;
     background-color: #666363;
     min-width: 160px;
-    left: 100%; 
-    top: 0; 
+    left: calc(100% + 10px); /* Posiciona el desplegable a la derecha del botón */
+    top: 50%; /* Posiciona el desplegable en el centro vertical del botón */
+    transform: translateY(-50%);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Triángulo para simular el guion */
+.Button .dropdown-content::before {
+    content: "";
+    position: absolute;
+    top: 50%; /* Posiciona la punta en el centro vertical del desplegable */
+    right: 100%; /* Posiciona la punta a la izquierda del desplegable */
+    border-width: 8px; /* Tamaño del triángulo */
+    border-style: solid;
+    border-color: transparent transparent transparent #666363; /* Color del triángulo */
+    transform: translateY(-50%);
+}
+
+/* Estilo para los elementos dentro del desplegable */
+.Button .dropdown-content a {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #F2F2F2;
+}
+
+/* Color de fondo al pasar el cursor sobre las opciones */
+.Button .dropdown-content a:hover {
+    background-color: #555;
+}
+
+/* Muestra el desplegable cuando se enfoca el botón */
+.Button .btn:focus + .dropdown-content {
+    display: block;
+}
+
+.Button .dropdown-content.active {
+    display: block; /* Muestra el desplegable cuando tiene la clase 'active' */
+    opacity: 1; /* Cambia la opacidad a 1 para hacer visible el desplegable */
 }
 
 /* Deplejable para todas las opciones que pueda tener un boton */ 
@@ -132,15 +194,19 @@ menu {
 .centered-image {
     text-align: center;
     margin-top: 50px;
-    margin-left: 1200px;
+    margin-left: 700px;
   }
 
   .centered-image img,
   .centered-image video {
-    max-width: 100%;
-    height: auto;
-    min-width: 300px;
+      max-width: 100%;
+      max-height: 700px;
+      width: auto;
+      height: auto;
+      margin-left: auto;
+      margin-right: 20%;
   }
+  
 
 .content-wrapper {
     display: flex;
@@ -187,20 +253,22 @@ menu {
     width: 100%;
     height: auto; /* Ensure the image maintains its aspect ratio */
 }
-
 #path{
     position: relative;
 }
-
 #pathForm {
     position: absolute;
-    bottom: 20px; /* Adjust the distance from the bottom as needed */
-    left: 50%;
+    top: 20% !important; /* Posición desde la parte inferior del botón */
+    left: 80%;
     transform: translateX(-50%);
-    background-color: #f8f9fa; /* Light background color */
+    background-color: #F2F2F2;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow effect */
+}
+
+#formContainer {
+    display: block;
 }
 
 /* Styles for form elements */
@@ -217,7 +285,7 @@ menu {
 }
 
 #pathForm button {
-    background-color: #007bff; 
+    background-color: #BA0620; /* Example color */
     color: #fff;
     border: none;
     padding: 8px 16px;
@@ -226,18 +294,5 @@ menu {
 }
 
 #pathForm button:hover {
-    background-color: #0056b3; 
+    background-color: #e20d2d; /* Example color on hover */
 }
-
-----------
-
-/*style for carousel*/
-
-
-
-#carouselExample .carousel-inner .carousel-item img {
-    max-width: 100%;
-    height: auto;
-    max-height: 200px; /* Adjust as needed */
-}
-
