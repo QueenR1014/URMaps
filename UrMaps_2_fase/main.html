@@ -33,13 +33,13 @@
     <header class="header-gris">
         <nav class="Nav-titulo">
             <div class="container-fluid">
-                <img id = "logoU"src="LogoU.png" alt="Logo" width="200px" height="90px" class="d-inline-block align-text-top">
+                <img src="LogoU.png" alt="Logo" width="200px" height="90px" class="d-inline-block align-text-top">
                 <a class="navbar-brand" href="Main.html">
                     UrMaps
                 </a>
             </div>
         </nav>
-        
+
         <section>
             <div class="dropdown-center">
                 <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
@@ -60,9 +60,10 @@
             <!--aside-->
             <aside>
                 <div class="container-fluid">
-                    <section> 
+                    <section>
                         <div class="Button">
-                            <button class="btn Button_config" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <button class="btn Button_config" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
                                 <img src="Barra_de_menu.png" alt="" width="80px" height="60px">
                             </button>
                             <div class="dropdown-content">
@@ -73,60 +74,77 @@
 
                     <section>
                         <div class="Button">
-                            <button class="btn Button_config" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <button class="btn Button_config" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false" id="showFormBtn">
                                 <img src="Museo.png" alt="" width="60px" height="60px">
                             </button>
-                            <div class="dropdown-content">
-                                <a href="#"> Claustro </a>
-                                <a href="#"> Torre 1 </a>
-                                <a href="#"> Torre 2 </a>
-                                <a href="#"> Cafeteria </a>
+                            <div id="formContainer" class="dropdown-content" style="display: none;">
+                                <!-- Tu formulario aquí -->
+                                <form id="pathForm">
+                                    <label for="endNode">Destino:</label>
+                                    <select id="endNode">
+                                        <option value="A">Entrada</option>
+                                        <option value="B">Escalera Caldas</option>
+                                        <option value="C">Baños Carrasquilla</option>
+                                        <option value="D">Entrada Teatrino</option>
+                                        <option value="E">Museo Rosarista</option>
+                                        <option value="F">Aula Mutis</option>
+                                        <option value="G">La Bordadita</option>
+                                        <option value="H">Cuenteros</option>
+                                        <option value="I">Escaleras Casur</option>
+                                        <option value="J">Comedor</option>
+                                    </select>
+                                    <button type="submit">Buscar ruta</button>
+                                </form>
                             </div>
                         </div>
-                </section><!--edificios-->
+                    </section><!--edificios-->
 
-                <section>
-                    <div class="Button">
-                        <button class="btn Button_config" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="Estrella.png" alt="" width="60px" height="60px">
-                        </button>
-                        <div class="dropdown-content">
-                            <a href="#"> Recientes </a>
+                    <section>
+                        <div class="Button">
+                            <button class="btn Button_config" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <img src="Estrella.png" alt="" width="60px" height="60px">
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="#"> Recientes </a>
+                            </div>
                         </div>
-                    </div>
-                </section><!--recientes-->
+                    </section><!--recientes-->
 
-                <section>
-                    <div class="Button">
-                        <button class="btn Button_config" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="Ubicacion.png" alt="" width="60px" height="60px">
-                        </button>
-                        <div class="dropdown-content">
-                            <a href="#"> Ubicacion actual </a>
+                    <section>
+                        <div class="Button">
+                            <button class="btn Button_config" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <img src="Ubicacion.png" alt="" width="60px" height="60px">
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="#"> Ubicacion actual </a>
+                            </div>
                         </div>
-                    </div>
-                </section><!--ubicacion actual-->
+                    </section><!--ubicacion actual-->
 
-                <section>
-                    <div class="Boton_final"> </div>
-                    <div class="Button">
-                        <button class="btn Button_config" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="Tres_puntos.png" alt="" width="60px" height="60px">
-                        </button>
-                        <div class="dropdown-content">
-                            <a href="#"> Contato </a>
-                            <a href="#"> Ajustes </a>
+                    <section>
+                        <div class="Boton_final"> </div>
+                        <div class="Button">
+                            <button class="btn Button_config" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <img src="Tres_puntos.png" alt="" width="60px" height="60px">
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="#"> Contato </a>
+                                <a href="#"> Ajustes </a>
+                            </div>
                         </div>
-                    </div>
-                </section><!--+ info-->
+                    </section><!--+ info-->
                 </div>
             </aside> <!--a la izq de la pantalla-->
 
             <!-- Inserta aquí la sección de redes sociales y barra de búsqueda -->
             <section class="search-social">
-                
+
                 <!-- Barra de búsqueda -->
-                
+
                 <!-- Botones de redes sociales -->
                 <div class="social-icons">
                     <button class="btn btn-primary rounded-circle"><img src="facebook.png" alt="Facebook"></button>
@@ -134,67 +152,36 @@
                     <button class="btn btn-primary rounded-circle"><img src="instagram.png" alt="Instagram"></button>
                 </div>
             </section>
-    
-            <!--Carousel
-            <div id="carouselExample" class="carousel slide">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="patoimg\Pato1.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="patoimg\Pato2.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="patoimg\patochiquito.jpg" class="d-block w-100" alt="...">
-                </div>
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div>
 
-            -->
             <!-- Mapa -->
             <section class="centered-image">
-                <img id = "mapa" src="Mapa.png" alt="" width="700px" height="700px" constrols style="display: block;">
+                <img id="mapa" src="Mapa.png" alt="" width="700px" height="700px" constrols style="display: block;">
                 <!--Video provisional-->
-                <!--<img id="media-video" src="J_path.gif" controls style="display: none;"></img>-->
+                <img id="media-video" src="J_path.gif" controls style="display: none;"></img>
             </section>
 
-            <!--formulario-->
-            
-            <div id = "path">
-            <form id="pathForm">      
-                    
-                    <label for="endNode">Destino:</label>
-                    <select id="endNode">
-                        <option value="A">Entrada</option>
-                    <option value="B">Escalera Caldas</option>
-                    <option value="C">Baños Carrasquilla</option>
-                    <option value="D">Entrada Teatrino</option>
-                    <option value="E">Museo Rosarista</option>
-                    <option value="F">Aula Mutis</option>
-                    <option value="G">La Bordadita</option>
-                    <option value="H">Cuenteros</option>
-                    <option value="I">Escaleras Casur</option>
-                    <option value="J">Comedor</option>
-                </select>
-                
-                <button type="submit">Buscar ruta</button>
-            </form>
-            </div>
-        
             <script src="map_script.js"></script>
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script>
+                $(document).ready(function () {
+                    $('#showFormBtn').click(function (event) {
+                        event.stopPropagation(); // Evitar que el clic en el botón cierre el formulario
+                        $('#formContainer').toggle();
+                    });
+
+                    // Ocultar el formulario cuando se haga clic fuera de él
+                    $(document).click(function (event) {
+                        if (!$(event.target).closest('#showFormBtn').length &&
+                            !$(event.target).closest('#formContainer').length) {
+                            $('#formContainer').hide();
+                        }
+                    });
+                });
+            </script>
         </div>
-    
+
     </main>
 
 </body>
 
 </html>
-
