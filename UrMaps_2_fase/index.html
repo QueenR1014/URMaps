@@ -21,6 +21,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ropa+Sans&family=Varela+Round&display=swap" rel="stylesheet">
     <!--<script src = "map_script.js"></script>-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
 </head>
 
 <body>
@@ -34,7 +41,7 @@
         <nav class="Nav-titulo">
             <div class="container-fluid">
                 <img src="LogoU.png" alt="Logo" width="200px" height="90px" class="d-inline-block align-text-top">
-                <a class="navbar-brand" href="Main.html">
+                <a class="navbar-brand" href="index.html">
                     UrMaps
                 </a>
             </div>
@@ -156,7 +163,7 @@
 
             <!--Carousel-->
             <section class="centered-image">
-                <!-- Carousel Container -->
+                
                 <div id="carouselExample" class="carousel slide" data-bs-ride="carousel"
                     style="width: 40%; position: absolute; top: 10%; left: 5%;">
                     <div class="carousel-inner">
@@ -170,7 +177,7 @@
                             <img src="patoimg\patochiquito.jpg" class="d-block w-100" alt="...">
                         </div>
                     </div>
-                    <!-- Carousel Controls -->
+                    
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
                         data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -187,12 +194,12 @@
             </section>
 
             <!-- Mapa -->
-            <section class="centered-image">
-                <img id="mapa" src="Mapa.png" alt="" width="700px" height="700px" constrols style="display: block;">
-                <!--Video provisional-->
-                <img id="media-video" src="J_path.gif" controls style="display: none;"></img>
+            <div id ="map" style="width: 600px; height: 600px; float:right; margin-right: 5%;">
+            
+                
             </section>
 
+            </div>
             <script src="map_script.js"></script>
             <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
             <script>

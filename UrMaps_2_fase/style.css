@@ -142,32 +142,12 @@ aside {
     background-color: #BA0620; 
     border-color: #BA0620; 
     color: #F2F2F2; 
-}
+}   
 
 ----------------------
 /* imagen "mapa" */
-menu {
-    text-align: center;
-    background-color: #F2F2F2;
-    position: absolute;
-}
 
-.centered-image {
-    text-align: center;
-    margin-top: 50px;
-    margin-left: 700px;
-  }
 
-  .centered-image img,
-  .centered-image video {
-      max-width: 100%;
-      max-height: 700px;
-      width: auto;
-      height: auto;
-      margin-left: auto;
-      margin-right: 20%;
-  }
-  
 
 .content-wrapper {
     display: flex;
@@ -204,19 +184,12 @@ menu {
 }
 
 --------
-#map-container {
-    position: relative;
-    width: 100%;
-    height: auto; /* Allow the container to adjust its height based on the image */
-}
 
-.map-image {
-    width: 100%;
-    height: auto; /* Ensure the image maintains its aspect ratio */
-}
+
 #path{
     position: relative;
 }
+
 #pathForm {
     position: absolute;
     top: 100%; /* Posición desde la parte inferior del botón */

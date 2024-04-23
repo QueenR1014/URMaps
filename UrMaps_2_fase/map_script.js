@@ -148,7 +148,7 @@ const names = [ ['A', 'Entrada'], ['B', 'Escalera Caldas'],
                 ['I', 'Escaleras Casur'], ['J','Comedor']];   
 
 //reemplazo de imagen
-
+/*
 function replaceImage(newPath){
     var imageElement = document.getElementById("mapa");
     if(imageElement){
@@ -173,7 +173,7 @@ function toggleMedia() {
       currentMediaType = 'image';
     }
   }
-
+*/
 
 //Manejo formulario
 //creación del evento
@@ -241,3 +241,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+
+// Map visualization
+
+var map = L.map('map').setView([0,0],1);
+var imageMap = 'mapa.png';
+
+L.imageOverlay(imageMap).addTo(map);
