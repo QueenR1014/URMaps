@@ -245,7 +245,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Map visualization
 
-var map = L.map('map').setView([0,0],1);
+var map = L.map('map').setView([0, 0], 0);
 var imageMap = 'mapa.png';
 
-L.imageOverlay(imageMap).addTo(map);
+// Load the image overlay with specific bounds
+var imageUrl = imageMap;
+var imageBounds = [[-479/2, -521/2], [479/2, 521/2]]; // Half of the image dimensions to center it around [0,0]
+
+L.imageOverlay(imageUrl, imageBounds).addTo(map);
+
+// Set the maximum bounds of the map to restrict panning
+map.setMaxBounds(imageBounds);
+
+// Add a marker to the map
+var marker = L.marker([20, 20]).addTo(map);
+
+
