@@ -147,36 +147,6 @@ const names = [ ['A', 'Entrada'], ['B', 'Escalera Caldas'],
                 ['G','La Bordadita'], ['H','Cuenteros'], 
                 ['I', 'Escaleras Casur'], ['J','Comedor']];   
 
-//reemplazo de imagen
-/*
-function replaceImage(newPath){
-    var imageElement = document.getElementById("mapa");
-    if(imageElement){
-        console.log('loaded image');
-        imageElement.src = newPath;
-        imageElement.alt = "mapa actualizado mostrando camino";
-    }
-}
-
-
-function toggleMedia() {
-    var imageElement = document.getElementById('mapa');
-    var videoElement = document.getElementById('media-video');
-
-    if (currentMediaType === 'image') {
-      imageElement.style.display = 'none';
-      videoElement.style.display = 'block';
-      currentMediaType = 'video';
-    } else {
-      videoElement.style.display = 'none';
-      imageElement.style.display = 'block';
-      currentMediaType = 'image';
-    }
-  }
-*/
-
-//Manejo formulario
-//creación del evento
 
 var form = document.getElementById('pathForm');
 
