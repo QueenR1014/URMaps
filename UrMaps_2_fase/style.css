@@ -88,13 +88,17 @@ aside {
     margin-top: 35px; /* Add top margin */
     position: relative; /* Position relative */
     background-color: #ba0620; /* Set background color */
+    z-index: 100;
 }
 
 .Button .btn {
+    min-width: 60px;
+    min-height: 60px;
     width: 70%; /* Set width */
     height: auto; /* Set height */
     margin: 0 auto; /* Center horizontally */
     display: block; /* Make it a block element */
+
 }
 
 .Button img {
@@ -109,6 +113,7 @@ aside {
     min-width: 160px; /* Set minimum width */
     left: calc(100% + 10px); /* Position relative to button */
     top: calc(20% + 10px); /* Position relative to button */
+    z-index: 100;
 }
 
 .Button .dropdown-content a {
@@ -215,23 +220,10 @@ aside {
     background-color: #e20d2d; /* Change background color on hover */
 }
 
-/* Carousel Styles */
-
-/* Carousel */
-#carouselExample {
-    margin-top: 10%; /* Add top margin */
-    margin-left: 7%; /* Add left margin */
-    z-index: 20; /* Set z-index */
-}
-
-.carousel-inner {
-    position: relative; /* Set position relative */
-    width: 100%; /* Take full width */
-    height: 100%; /* Take full height */
-}
-
-.carousel-item {
-    width: 100%; /* Take full width */
-    height: 100%; /* Take full height */
-    object-fit: cover; /* Ensure images maintain aspect ratio and cover the entire carousel item */
+/* Map Styles*/
+#map {
+    width: 600px; height: 500px; float:center;
+    margin-left: 15%;
+    margin-right: auto;
+    z-index: 90;
 }

@@ -3,9 +3,10 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
-<html lang="en">
+<html lang="ES">
 
 <head>
+    <link rel = "icon" type="image" href = "urmaps_ico_grande.ico">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>URMAPS</title>
@@ -28,6 +29,7 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
         crossorigin=""></script>
+    <script src = "items_script.js"></script>
 </head>
 
 <body>
@@ -80,45 +82,20 @@
                         </div>
                     </section>
 
-                    <!-- Botón y formulario para búsqueda de ruta -->
+                    <!-- Botón para desplegue de info universidad-->
                     <section>
                         <div class="Button">
-                            <button class="btn Button_config" type="button" data-bs-toggle="dropdown"
-                                aria-expanded="false" id="showFormBtn">
+                            <button id = "toggleAside" class="btn Button_config" type="button">
                                 <img src="buttons/Museo.png" alt="" width="60px" height="60px">
                             </button>
-                            <div id="formContainer" class="dropdown-content" style="display: none;">
-                                <form id="pathForm">
-                                    <label for="endNode">Destino:</label>
-                                    <select id="endNode">
-                                        <option value="A">Entrada</option>
-                                        <option value="B">Escalera Caldas</option>
-                                        <option value="C">Baños Carrasquilla</option>
-                                        <option value="D">Entrada Teatrino</option>
-                                        <option value="E">Museo Rosarista</option>
-                                        <option value="F">Aula Mutis</option>
-                                        <option value="G">La Bordadita</option>
-                                        <option value="H">Cuenteros</option>
-                                        <option value="I">Escaleras Casur</option>
-                                        <option value="J">Comedor</option>
-                                    </select>
-                                    <button type="submit">Buscar ruta</button>
-                                </form>
-                            </div>
+                        </div>
+                        <div class="dropdown-content">
+                            <!-- Menu options -->
+                            <a href="#">Option 1</a>
+                            <a href="#">Option 2</a>
+                            <a href="#">Option 3</a>
                         </div>
                     </section>
-
-                    <section>
-                        <div class="Button">
-                            <button class="btn Button_config" type="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                <img src="buttons/Estrella.png" alt="" width="60px" height="60px">
-                            </button>
-                            <div class="dropdown-content">
-                                <a href="#"> Recientes </a>
-                            </div>
-                        </div>
-                    </section><!--recientes-->
 
                     <section>
                         <div class="Button">
@@ -131,27 +108,6 @@
                             </div>
                         </div>
                     </section><!--ubicacion actual-->
- 
- 
-                    <!-- Otros botones del menú -->
-                     <section>
-                     <section>
-                        <div class="Boton_final"> </div>
-                        <!-- Otros botones -->
-                        <div class="Button">
-                    </section>
-                            <button class="btn Button_config" type="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                <img src="buttons/Tres_puntos.png" alt="" width="60px" height="60px">
-                            </button>
-                            <div class="dropdown-content">
-                                <a href="#"> Contacto </a>
-                                <a href="#"> Ajustes </a>
-                            </div>
-                        </div>
-                    </section><!--+ info-->
-                 </div>
-                 </div>
             </aside> <!--a la izq de la pantalla-->
 
 
@@ -166,7 +122,7 @@
                 </div>
             </section>
 
-            <!-- Carousel -->
+            <!-- Carousel 
             <section class="centered-image">
                 <div id="carouselExample" class="carousel slide" data-bs-ride="carousel"
                     style="width: 40%; position: absolute; top: 10%; left: 5%;">
@@ -181,7 +137,7 @@
                             <img src="patoimg\patochiquito.jpg" class="d-block w-100" alt="...">
                         </div>
                     </div>
-                    <!-- Controles del carousel -->
+                    
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
                         data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -193,12 +149,32 @@
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
-            </section>
+            </section>-->
 
             <!-- Mapa -->
             <section>
-                <div id="map" style="width: 479px; height: 521px; float:right; margin-right: 5%;"></div>
+                <div id="map"></div>
             </section>
+
+            <!--formulario de búsqueda-->
+            <div id="formContainer" class="dropdown-content" style="display: none;">
+                <form id="pathForm">
+                    <label for="endNode">Destino:</label>
+                    <select id="endNode">
+                        <option value="A">Entrada</option>
+                        <option value="B">Escalera Caldas</option>
+                        <option value="C">Baños Carrasquilla</option>
+                        <option value="D">Entrada Teatrino</option>
+                        <option value="E">Museo Rosarista</option>
+                        <option value="F">Aula Mutis</option>
+                        <option value="G">La Bordadita</option>
+                        <option value="H">Cuenteros</option>
+                        <option value="I">Escaleras Casur</option>
+                        <option value="J">Comedor</option>
+                    </select>
+                    <button type="submit">Buscar ruta</button>
+                </form>
+            </div>
         </div>
 
         <!-- Script para el formulario de búsqueda -->
