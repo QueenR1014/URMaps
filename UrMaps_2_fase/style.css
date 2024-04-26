@@ -1,0 +1,228 @@
+/* General Styles */
+
+/* Path */
+#path {
+    position: absolute; /* Position the path element absolutely */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Take full width of the viewport */
+    height: 100%; /* Take full height of the viewport */
+}
+
+/* Header Styles */
+
+/* Navigation Title */
+.Nav-titulo {
+    background-color: #666363; /* Set background color */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.Nav-titulo .navbar-brand {
+    margin: 0; /* Reset margin */
+    text-align: center; /* Center text */
+    position: absolute; /* Position absolutely */
+    left: 50%; /* Center horizontally */
+    top: 2%; /* Slightly offset from the top */
+    transform: translateX(-50%); /* Adjust for centering */
+    font-size: 40px; /* Set font size */
+    font-family: "Varela Round", sans-serif; /* Set font family */
+    font-weight: 400; /* Set font weight */
+    font-style: normal; /* Set font style */
+    color: #F2F2F2; /* Set text color */
+}
+
+/* Dropdown Styles */
+.dropdown-center {
+    position: absolute; /* Position absolutely */
+    top: 25px; /* Offset from the top */
+    right: 40px; /* Offset from the right */
+    background-color: #666363; /* Set background color */
+    width: 70px; /* Set width */
+    height: 50px; /* Set height */
+    font-size: 25px; /* Set font size */
+}
+
+.btn-secondary {
+    background-color: #666363; /* Set background color */
+    border-color: #666363; /* Set border color */
+    color: #F2F2F2; /* Set text color */
+}
+
+.dropdown-menu {
+    background-color: #666363; /* Set background color */
+    font-size: 16px; /* Set font size */
+    min-width: 600px; /* Set minimum width */
+    max-height: 50px; /* Set maximum height */
+    overflow-y: auto; /* Enable vertical overflow scrolling */
+}
+
+ul.dropdown-menu li a {
+    color: #F2F2F2 !important; /* Set text color for dropdown items */
+}
+
+/* Aside Styles */
+
+/* Sidebar */
+aside {
+    text-align: center; /* Center text */
+    width: 7%; /* Set width */
+    min-width: 60px; /* Set minimum width */
+    max-width: 15%; /* Set maximum width */
+    height: 100%; /* Take full height */
+    background-color: #BA0620; /* Set background color */
+    position: fixed; /* Position fixed */
+}
+
+.container-fluid {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange children in a column */
+    height: 100%; /* Take full height */
+}
+
+/* Button Styles */
+.Button {
+    width: 100%; /* Take full width */
+    padding: 10px 0; /* Set padding */
+    margin-top: 35px; /* Add top margin */
+    position: relative; /* Position relative */
+    background-color: #ba0620; /* Set background color */
+    z-index: 100;
+}
+
+.Button .btn {
+    min-width: 60px;
+    min-height: 60px;
+    width: 70%; /* Set width */
+    height: auto; /* Set height */
+    margin: 0 auto; /* Center horizontally */
+    display: block; /* Make it a block element */
+
+}
+
+.Button img {
+    width: 100%; /* Set width */
+    height: auto; /* Set height */
+}
+
+.Button .dropdown-content {
+    display: none; /* Hide dropdown content by default */
+    position: absolute; /* Position absolutely */
+    background-color: #666363; /* Set background color */
+    min-width: 160px; /* Set minimum width */
+    left: calc(100% + 10px); /* Position relative to button */
+    top: calc(20% + 10px); /* Position relative to button */
+    z-index: 100;
+}
+
+.Button .dropdown-content a {
+    display: block; /* Display as block */
+    padding: 10px; /* Set padding */
+    text-decoration: none; /* Remove underline */
+    color: #f2f2f2; /* Set text color */
+}
+
+.Button .dropdown-content a:hover {
+    background-color: #666363; /* Set background color on hover */
+}
+
+.Button .btn:focus + .dropdown-content {
+    display: block; /* Display dropdown content on focus */
+}
+
+.Boton_final {
+    margin-top: 140px; /* Add top margin */
+}
+
+.Button_config {
+    background-color: #ba0620; /* Set background color */
+    border-color: #ba0620; /* Set border color */
+    color: #f2f2f2; /* Set text color */
+}
+
+/* Content Styles */
+
+/* Content Wrapper */
+.content-wrapper {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange children in a column */
+}
+
+/* Search and Social */
+.search-social {
+    text-align: right; /* Align text to the right */
+    margin-top: 20px; /* Add top margin */
+}
+
+.search-social input {
+    width: auto; /* Set width to auto */
+    margin-right: 10px; /* Add right margin */
+}
+
+.social-icons {
+    display: inline-block; /* Display inline block */
+}
+
+.social-icons .btn {
+    margin: 0.5px; /* Set margin */
+    background-color: transparent; /* Set background color to transparent */
+    border: none; /* Remove border */
+}
+
+.social-icons .btn img {
+    width: 40px; /* Set width */
+    height: 40px; /* Set height */
+    border-radius: 50%; /* Make it round */
+    background-color: #d6d6d6; /* Set background color */
+    padding: 8px; /* Set padding */
+}
+
+/* Map Styles*/
+#map {
+    width: 600px; height: 500px; float:center;
+    margin-left: 15%;
+    margin-right: auto;
+    z-index: 90;
+}
+/* Form Styles */
+
+/* Path Form */
+#pathForm {
+    position: absolute; /* Position absolutely */
+    background-color: #f2f2f2; /* Set background color */
+    padding: 15px; /* Set padding */
+    border-radius: 20px; /* Set border radius */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow */
+}
+
+#formContainer {
+    display: block; /* Display as block */
+    margin-left: auto;
+    margin-right: 10%;
+    margin-top: auto;
+}
+
+#pathForm form {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange children in a column */
+}
+
+#pathForm label,
+#pathForm select,
+#pathForm button {
+    margin-bottom: 10px; /* Add bottom margin */
+}
+
+#pathForm button {
+    background-color: #ba0620; /* Set background color */
+    color: #fff; /* Set text color */
+    border: none; /* Remove border */
+    padding: 8px 16px; /* Set padding */
+    border-radius: 4px; /* Set border radius */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+#pathForm button:hover {
+    background-color: #e20d2d; /* Change background color on hover */
+}
