@@ -30,6 +30,8 @@
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
         crossorigin=""></script>
     <script src = "items_script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        
 </head>
 
 <body>
@@ -156,47 +158,25 @@
                 <div id="map"></div>
             </section>
 
-            <!--formulario de búsqueda-->
-            <div id="formContainer" class="dropdown-content" style="display: none;">
-                <form id="pathForm">
-                    <label for="endNode">Destino:</label>
-                    <select id="endNode">
-                        <option value="A">Entrada</option>
-                        <option value="B">Escalera Caldas</option>
-                        <option value="C">Baños Carrasquilla</option>
-                        <option value="D">Entrada Teatrino</option>
-                        <option value="E">Museo Rosarista</option>
-                        <option value="F">Aula Mutis</option>
-                        <option value="G">La Bordadita</option>
-                        <option value="H">Cuenteros</option>
-                        <option value="I">Escaleras Casur</option>
-                        <option value="J">Comedor</option>
-                    </select>
-                    <button type="submit">Buscar ruta</button>
-                </form>
-            </div>
-        </div>
-
         <!-- Script para el formulario de búsqueda -->
         <script src="map_script.js"></script>
-        <!-- jQuery -->
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script>
-            $(document).ready(function () {
-                $('#showFormBtn').click(function (event) {
-                    event.stopPropagation(); // Evitar que el clic en el botón cierre el formulario
-                    $('#formContainer').toggle();
-                });
 
-                // Ocultar el formulario cuando se haga clic fuera de él
-                $(document).click(function (event) {
-                    if (!$(event.target).closest('#showFormBtn').length &&
-                        !$(event.target).closest('#formContainer').length) {
-                        $('#formContainer').hide();
-                    }
-                });
-            });
-        </script>
+        <!--formulario de búsqueda de ruta-->
+        <div id="formContainer" class="dropdown-content">
+            <form id = "pathForm">
+                <label>¿A dónde deseas ir?</label>
+                <select class="form-control">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+                <button type="submit">Ir</button>
+            </form>
+        </div>
+        
+       
     </main>
 
 </body>

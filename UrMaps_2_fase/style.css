@@ -178,22 +178,29 @@ aside {
     padding: 8px; /* Set padding */
 }
 
+/* Map Styles*/
+#map {
+    width: 600px; height: 500px; float:center;
+    margin-left: 15%;
+    margin-right: auto;
+    z-index: 90;
+}
 /* Form Styles */
 
 /* Path Form */
 #pathForm {
     position: absolute; /* Position absolutely */
-    top: 100%; /* Position relative to button */
-    left: 80%; /* Offset from the left */
-    transform: translateX(-50%); /* Center horizontally */
     background-color: #f2f2f2; /* Set background color */
     padding: 15px; /* Set padding */
-    border-radius: 8px; /* Set border radius */
+    border-radius: 20px; /* Set border radius */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow */
 }
 
 #formContainer {
     display: block; /* Display as block */
+    margin-left: auto;
+    margin-right: 10%;
+    margin-top: auto;
 }
 
 #pathForm form {
@@ -218,12 +225,4 @@ aside {
 
 #pathForm button:hover {
     background-color: #e20d2d; /* Change background color on hover */
-}
-
-/* Map Styles*/
-#map {
-    width: 600px; height: 500px; float:center;
-    margin-left: 15%;
-    margin-right: auto;
-    z-index: 90;
 }

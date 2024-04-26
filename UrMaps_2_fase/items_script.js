@@ -1,34 +1,6 @@
 'use strict'
 
-console.log('loaded');
-
-var form = document.getElementById('pathForm');
-
-form.addEventListener('submit', function(event){
-    event.preventDefault(); // prevents autosubmitting
-
-    const startNode = 'A';
-    let endNode = document.getElementById('endNode').value;
-    console.log(endNode);
-
-    let {path, distance} = dijkstra(mapGraph, startNode, endNode);
-
-    if(path){
-        //checkeo de información
-        console.log(path);
-        console.log(distance);
-
-        //Demo - reemplazo imagen
-        if(endNode == 'J' && currentMediaType == "image"){
-            toggleMedia();
-        }else if(currentMediaType == "video"){
-            toggleMedia();
-        }
-    }else{
-        console.log('Camino no encontrado');
-    }
-});
-
+console.log('items scrip loaded');
 
 //animacion de los desplegables 
 document.querySelectorAll('.Button .btn').forEach(function(btn) {
