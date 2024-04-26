@@ -172,20 +172,3 @@ var marker = L.marker([20, 20]).addTo(map);
 
 var form = document.getElementById('pathForm');
 
-form.addEventListener('submit', function(event){
-    event.preventDefault(); // prevents autosubmitting
-
-    const startNode = 'A';
-    let endNode = document.getElementById('endNode').value;
-    console.log(endNode);
-
-    let {path, distance} = dijkstra(mapGraph, startNode, endNode);
-
-    if(path){
-        //checkeo de información
-        console.log(path);
-        console.log(distance);
-    }else{
-        console.log('Camino no encontrado');
-    }
-});
