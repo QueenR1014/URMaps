@@ -146,7 +146,7 @@ aside {
 /* Content Wrapper */
 .content-wrapper {
     display: flex; /* Use flexbox for layout */
-    flex-direction: column; /* Arrange children in a column */
+    flex-direction: row; /* Arrange children in a column */
 }
 
 /* Search and Social */
@@ -182,47 +182,50 @@ aside {
 #map {
     width: 600px; height: 500px; float:center;
     margin-left: 15%;
-    margin-right: auto;
+    margin-top: 20%;
     z-index: 90;
 }
-/* Form Styles */
 
-/* Path Form */
+
+/* Styles for Path Form */
 #pathForm {
-    position: absolute; /* Position absolutely */
-    background-color: #f2f2f2; /* Set background color */
-    padding: 15px; /* Set padding */
-    border-radius: 20px; /* Set border radius */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow */
+    width: 100%; /* Set form width */
+    max-width: 400px; /* Set maximum form width */
+    margin-top: 40%;
+    margin-left: 60%;
+    margin-right:15%;
+    padding: 20px; /* Add padding to the form */
+    background-color: #f2f2f2; /* Set form background color */
+    border-radius: 10px; /* Set form border radius */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add form shadow */
 }
 
-#formContainer {
-    display: block; /* Display as block */
-    margin-left: auto;
-    margin-right: 10%;
-    margin-top: auto;
+/* Styles for Form Elements */
+#pathForm label {
+    display: block; /* Display labels as blocks */
+    margin-bottom: 10px; /* Add bottom margin to labels */
+    font-weight: bold; /* Set font weight for labels */
 }
 
-#pathForm form {
-    display: flex; /* Use flexbox for layout */
-    flex-direction: column; /* Arrange children in a column */
+#pathForm select[multiple] {
+    width: 100%; /* Set select width to fill the container */
+    padding: 8px; /* Add padding to the select */
+    border-radius: 5px; /* Set border radius for select */
+    border: 1px solid #ccc; /* Add border to select */
+    margin-bottom: 10px; /* Add bottom margin to select */
+    height: 150px; /* Set height for multiple select */
+    overflow-y: auto; /* Enable vertical scrolling if needed */
 }
 
-#pathForm label,
-#pathForm select,
 #pathForm button {
-    margin-bottom: 10px; /* Add bottom margin */
-}
-
-#pathForm button {
-    background-color: #ba0620; /* Set background color */
-    color: #fff; /* Set text color */
-    border: none; /* Remove border */
-    padding: 8px 16px; /* Set padding */
-    border-radius: 4px; /* Set border radius */
-    cursor: pointer; /* Change cursor to pointer */
+    background-color: #ba0620; /* Set button background color */
+    color: #fff; /* Set button text color */
+    border: none; /* Remove button border */
+    padding: 10px 20px; /* Set button padding */
+    border-radius: 5px; /* Set button border radius */
+    cursor: pointer; /* Set cursor to pointer on hover */
 }
 
 #pathForm button:hover {
-    background-color: #e20d2d; /* Change background color on hover */
+    background-color: #e20d2d; /* Change button background color on hover */
 }
