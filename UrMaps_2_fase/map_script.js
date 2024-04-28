@@ -150,12 +150,12 @@ const names = [ ['A', 'Entrada'], ['B', 'Escalera Caldas'],
 
 // Map visualization
 
-var map = L.map('map').setView([0, 0], 2);
-var imageMap = 'mapa.png';
+var map = L.map('map').setView([0, 0], 3);
+var imageMap = 'Mapa/Mapa.png';
 
 // Load the image overlay with specific bounds
 var imageUrl = imageMap;
-var aspectRatio = 521 / 479; // Width / Height
+var aspectRatio = 3000 / 3000; // Width / Height of your image
 var mapHeight = 100; // Set the desired map height in map units (e.g., degrees of latitude)
 var mapWidth = aspectRatio * mapHeight; // Calculate the corresponding width based on the aspect ratio
 

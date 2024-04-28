@@ -181,7 +181,7 @@ aside {
 /* Map Styles*/
 #map {
     width: 600px; height: 500px; float:center;
-    margin-left: 15%;
+    margin-left: 25%;
     margin-top: 20%;
     z-index: 90;
 }
@@ -191,8 +191,8 @@ aside {
 #pathForm {
     width: 100%; /* Set form width */
     max-width: 400px; /* Set maximum form width */
-    margin-top: 40%;
-    margin-left: 60%;
+    margin-top: 100%;
+    margin-left: 100%;
     margin-right:15%;
     padding: 20px; /* Add padding to the form */
     background-color: #f2f2f2; /* Set form background color */
