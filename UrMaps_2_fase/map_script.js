@@ -72,47 +72,6 @@ function dijkstra(graph, start, end) {
         }
     }
 
-    // Dibuja el nuevo camino si existe
-// Dibuja el nuevo camino si existe
-if (path) {
-    // Crea un elemento SVG
-    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-    svg.setAttribute('width', '100%');
-    svg.setAttribute('height', '100%');
-
-    // Itera sobre los nodos en el camino
-    for (let i = 0; i < path.length - 1; i++) {
-        const currentNode = path[i];
-        const nextNode = path[i + 1];
-
-        // Obtiene las coordenadas del nodo actual y el siguiente nodo
-        const startX = coordinates[currentNode].x;
-        const startY = coordinates[currentNode].y;
-        const endX = coordinates[nextNode].x;
-        const endY = coordinates[nextNode].y;
-
-        // Crea un elemento de línea SVG para conectar los nodos
-        const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-        line.setAttribute('x1', (startX / img.width) * 100 + '%');
-        line.setAttribute('y1', (startY / img.height) * 100 + '%');
-        line.setAttribute('x2', (endX / img.width) * 100 + '%');
-        line.setAttribute('y2', (endY / img.height) * 100 + '%');
-        line.setAttribute('stroke', 'red'); // Color de la línea
-        line.setAttribute('stroke-width', '2'); // Grosor de la línea
-
-        // Agrega la línea al SVG
-        svg.appendChild(line);
-    }
-
-    // Agrega el SVG al contenedor de camino
-    pathElement.appendChild(svg);
-
-    console.log('Shortest Path:', path);
-    console.log('Shortest Distance:', distance);
-} else {
-    console.log('No hay camino disponible entre los nodos seleccionados.');
-}
-
 
 
     return null; // Path not found
