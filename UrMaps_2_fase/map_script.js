@@ -128,10 +128,10 @@ const mapGraph = [  ['A', 'B', 5], ['A', 'E', 7],
 
 
 const coordinates = {
-    "A": { "x": 177, "y": 1144},
+    "A": { "x": 21, "y": 35},
     "B": {"x": 259,"y": 1144},
     "C": {"x": 261,"y": 1050},
-    "D": {"x": 261,"y": 996},
+    "D": {"x": 9,"y": 9},
     "E": {"x": 100,"y": 1144},
     "F": {"x": 100,"y": 1033},
     "G": {"x": 100,"y": 996},
@@ -167,7 +167,7 @@ L.imageOverlay(imageUrl, imageBounds).addTo(map);
 map.setMaxBounds(imageBounds);
 
 // Add a marker to the map
-var marker = L.marker([20, 20]).addTo(map);
+var marker = L.marker([35,21]).addTo(map);
 
 
 var form = document.getElementById('pathForm');
