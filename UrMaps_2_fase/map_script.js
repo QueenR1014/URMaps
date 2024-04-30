@@ -129,21 +129,21 @@ const mapGraph = [  ['A', 'B', 5], ['A', 'E', 7],
 
 const coordinates = {
     "A": { "x": 21, "y": 35},
-    "B": {"x": 259,"y": 1144},
-    "C": {"x": 261,"y": 1050},
+    "B": {"x": 9,"y": 32},
+    "C": {"x": 9,"y": 19},
     "D": {"x": 9,"y": 9},
-    "E": {"x": 100,"y": 1144},
-    "F": {"x": 100,"y": 1033},
-    "G": {"x": 100,"y": 996},
-    "H": {"x": 261,"y": 960},
-    "I": {"x": 299,"y": 960},
-    "J": {"x": 150,"y": 960}
+    "E": {"x": 31,"y": 32},
+    "F": {"x": 31,"y": 21},
+    "G": {"x": 31,"y": 9},
+    "H": {"x": 9,"y": -13},
+    "I": {"x": 6,"y": -10},
+    "J": {"x": 24,"y": -22}
 }
 
 
 const names = [ ['A', 'Entrada'], ['B', 'Escalera Caldas'], 
                 ['C', 'Baños Carrasquilla'], ['D', 'Entrada Teatrino'], 
-                ['E', 'Museo Rosarista'], ['F', 'Aula Mutis'], 
+                ['E', 'Síndico'], ['F', 'Aula Mutis'], 
                 ['G','La Bordadita'], ['H','Cuenteros'], 
                 ['I', 'Escaleras Casur'], ['J','Comedor']];   
 
@@ -167,7 +167,7 @@ L.imageOverlay(imageUrl, imageBounds).addTo(map);
 map.setMaxBounds(imageBounds);
 
 // Add a marker to the map
-var marker = L.marker([35,21]).addTo(map);
+var marker = L.marker([-22,24]).addTo(map);
 
 
 var form = document.getElementById('pathForm');
