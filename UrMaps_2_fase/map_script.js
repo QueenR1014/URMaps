@@ -72,47 +72,6 @@ function dijkstra(graph, start, end) {
         }
     }
 
-    // Dibuja el nuevo camino si existe
-// Dibuja el nuevo camino si existe
-if (path) {
-    // Crea un elemento SVG
-    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-    svg.setAttribute('width', '100%');
-    svg.setAttribute('height', '100%');
-
-    // Itera sobre los nodos en el camino
-    for (let i = 0; i < path.length - 1; i++) {
-        const currentNode = path[i];
-        const nextNode = path[i + 1];
-
-        // Obtiene las coordenadas del nodo actual y el siguiente nodo
-        const startX = coordinates[currentNode].x;
-        const startY = coordinates[currentNode].y;
-        const endX = coordinates[nextNode].x;
-        const endY = coordinates[nextNode].y;
-
-        // Crea un elemento de línea SVG para conectar los nodos
-        const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-        line.setAttribute('x1', (startX / img.width) * 100 + '%');
-        line.setAttribute('y1', (startY / img.height) * 100 + '%');
-        line.setAttribute('x2', (endX / img.width) * 100 + '%');
-        line.setAttribute('y2', (endY / img.height) * 100 + '%');
-        line.setAttribute('stroke', 'red'); // Color de la línea
-        line.setAttribute('stroke-width', '2'); // Grosor de la línea
-
-        // Agrega la línea al SVG
-        svg.appendChild(line);
-    }
-
-    // Agrega el SVG al contenedor de camino
-    pathElement.appendChild(svg);
-
-    console.log('Shortest Path:', path);
-    console.log('Shortest Distance:', distance);
-} else {
-    console.log('No hay camino disponible entre los nodos seleccionados.');
-}
-
 
 
     return null; // Path not found
@@ -129,21 +88,21 @@ const mapGraph = [  ['A', 'B', 5], ['A', 'E', 7],
 
 const coordinates = {
     "A": { "x": 21, "y": 35},
-    "B": {"x": 259,"y": 1144},
-    "C": {"x": 261,"y": 1050},
+    "B": {"x": 9,"y": 32},
+    "C": {"x": 9,"y": 19},
     "D": {"x": 9,"y": 9},
-    "E": {"x": 100,"y": 1144},
-    "F": {"x": 100,"y": 1033},
-    "G": {"x": 100,"y": 996},
-    "H": {"x": 261,"y": 960},
-    "I": {"x": 299,"y": 960},
-    "J": {"x": 150,"y": 960}
+    "E": {"x": 31,"y": 32},
+    "F": {"x": 31,"y": 21},
+    "G": {"x": 31,"y": 9},
+    "H": {"x": 9,"y": -13},
+    "I": {"x": 6,"y": -10},
+    "J": {"x": 24,"y": -22}
 }
 
 
 const names = [ ['A', 'Entrada'], ['B', 'Escalera Caldas'], 
                 ['C', 'Baños Carrasquilla'], ['D', 'Entrada Teatrino'], 
-                ['E', 'Museo Rosarista'], ['F', 'Aula Mutis'], 
+                ['E', 'Síndico'], ['F', 'Aula Mutis'], 
                 ['G','La Bordadita'], ['H','Cuenteros'], 
                 ['I', 'Escaleras Casur'], ['J','Comedor']];   
 
@@ -167,7 +126,7 @@ L.imageOverlay(imageUrl, imageBounds).addTo(map);
 map.setMaxBounds(imageBounds);
 
 // Add a marker to the map
-var marker = L.marker([35,21]).addTo(map);
+var marker = L.marker([-22,24]).addTo(map);
 
 
 var form = document.getElementById('pathForm');
