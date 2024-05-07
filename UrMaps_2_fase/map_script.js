@@ -110,7 +110,7 @@ const names = [ ['A', 'Entrada'], ['B', 'Escalera Caldas'],
 // Map visualization
 
 var map = L.map('map').setView([0, 0], 3);
-var imageMap = 'Mapa/Mapa.png';
+var imageMap = 'Mapa/Mapapato.png';
 
 // Load the image overlay with specific bounds
 var imageUrl = imageMap;
@@ -126,8 +126,14 @@ L.imageOverlay(imageUrl, imageBounds).addTo(map);
 map.setMaxBounds(imageBounds);
 
 // Add a marker to the map
-var marker = L.marker([-22,24]).addTo(map);
+
 
 
 var form = document.getElementById('pathForm');
+
+for(const [key, value] of Object.entries(coordinates)){
+    var marker = L.marker([coordinates[key]["y"],coordinates[key]["x"]]).addTo(map);
+}
+
+console.log("added markers");
 
