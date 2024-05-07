@@ -7,33 +7,33 @@ document.addEventListener('DOMContentLoaded', function () {
             "m1": "Where do you want to go?",
             "m2": "Entrance",
             "m3": "Caldas Stairs",
-            "m4": "Carrasquilla Bathrooms",
+            "m4": "Colonial Cloister Bathrooms",
             "m5": "Teatrino Entrance",
             "m6": "Syndic",
-            "m7": "Mutis Classroom",
+            "m7": "Aula Mutis Auditorium",
             "m8": "La Bordadita",
-            "m9": "Cuenteros",
-            "m10": "Casur Stairs",
+            "m9": "Cuenteros Plaza",
+            "m10": "CASUR Stairs",
             "m11": "Dining Hall",
             "m12": "Go",
-            "ubi":"Current Location"
+            "ubi": "Current Location"
         },
         "ES": {
             "pageTitle": "URMAPS",
             "linkInfo": "Información",
             "m1": "¿A dónde deseas ir?",
             "m2": "Entrada",
-            "m3": "Escalera Caldas",
-            "m4": "Baños Carrasquilla",
+            "m3": "Escaleras de Caldas",
+            "m4": "Baños Claustro Colonial",
             "m5": "Entrada Teatrino",
             "m6": "Síndico",
             "m7": "Aula Mutis",
             "m8": "La Bordadita",
-            "m9": "Cuenteros",
-            "m10": "Escaleras Casur",
+            "m9": "Plaza Cuenteros",
+            "m10": "Escaleras CASUR",
             "m11": "Comedor",
             "m12": "Ir",
-            "ubi":"Ubicacion Actual"
+            "ubi": "Ubicacion Actual"
         }
     };
 
