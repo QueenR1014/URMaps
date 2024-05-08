@@ -224,6 +224,7 @@ aside {
     padding: 0; /* Remove default padding */
     margin: 0; /* Remove default margin */
     position: relative;
+    top: -10%;
     background-color: #ffffff; /* Set background color */
     border-radius: 10px; /* Set border radius */
     translate: 0px 80px;
