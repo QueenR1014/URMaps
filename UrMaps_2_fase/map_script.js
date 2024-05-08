@@ -159,10 +159,24 @@ map.setMaxBounds(imageBounds);
 
 // Add a marker to the map
 
+let polyline = null;
+function visualization(start,end){
+    //var marker = L.marker([-22,19]).addTo(map);
+    
+    var path = dijkstra(mapGraph,start,end)["path"];
+    var polyline_coord = [];
+    //console.log(path);
+    for(let i = 0; i < path.length; i++){
+        //console.log(path_coordinates[path[i]]);
+        polyline_coord.push([path_coordinates[path[i]]["y"],path_coordinates[path[i]]["x"]]);
+    }
+    console.log(polyline_coord);
 
-function visualization(){
-    var marker = L.marker([-22,19]).addTo(map);
-    cons
+    if(polyline){
+        map.removeLayer(polyline);
+    }
+    polyline = L.polyline(polyline_coord,{color:"blue"}).addTo(map);
+    //polyline.remove();
 }
 
-//visualization();
+visualization("A","I");
