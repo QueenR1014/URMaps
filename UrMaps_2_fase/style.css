@@ -1,19 +1,28 @@
 /* General Styles */
 
+
+.gradiante {
+    background-image: linear-gradient(to top, #801e1e 2%, #000000);
+    height: 100vh; /* Establece la altura al 50% del viewport height */
+    width: 100vw; /* Establece el ancho al 80% del viewport width */
+    position:fixed;
+    left: 15%;
+}
+
 /* Path */
 #path {
     position: absolute; /* Position the path element absolutely */
     top: 0; /* Align to the top */
     left: 0; /* Align to the left */
     width: 100%; /* Take full width of the viewport */
-    height: 100%; /* Take full height of the viewport */
+    height: 100%; /* Take full height of the viewport */    
 }
 
 /* Header Styles */
 
 /* Navigation Title */
  .Nav-titulo {
-    background-color: #250000; /* Set background color */
+    background-color: #000000; /* Set background color */
      display: flex; /* Use flexbox for layout */
      justify-content: center; /* Center horizontally */
      align-items: center; /* Center vertically */
@@ -52,20 +61,20 @@ margin-left: 10px
     position: absolute; /* Position absolutely */
     top: 40px; /* Offset from the top */
     right: 40px; /* Offset from the right */
-    background-color: #250000; /* Set background color */
+    background-color: #000000; /* Set background color */
     width: 70px; /* Set width */
     height: 50px; /* Set height */
     font-size: 25px; /* Set font size */
 }
 
 .btn-secondary {
-    background-color: #250000; /* Set background color */
-    border-color: #250000; /* Set border color */
+    background-color: #000000; /* Set background color */
+    border-color: #000000; /* Set border color */
     color: #F2F2F2; /* Set text color */
 }
 
 .dropdown-menu {
-    background-color: #250000; /* Set background color */
+    background-color: #000000; /* Set background color */
     font-size: 16px; /* Set font size */
     min-width: 60px; /* Set minimum width */
     max-height: 50px; /* Set maximum height */
@@ -85,7 +94,7 @@ aside {
     min-width: 60px; /* Set minimum width */
     max-width: 15%; /* Set maximum width */
     height: 100%; /* Take full height */
-    background-color: #BA0620; /* Set background color */
+    background-image: linear-gradient(to top, #801e1e 2%, #000000);
     position: fixed; /* Position fixed */
 }
 
@@ -164,10 +173,16 @@ aside {
 }
 
 /* Search and Social */
-.search-social {
-    text-align: right; /* Align text to the right */
-    margin-top: 20px; /* Add top margin */
-}
+
+.search-social{
+    margin-top: 0%;
+    width: 20%;
+    height: 5%;
+    position: absolute;
+    top: 5%;
+    left: 65%;
+
+ }
 
 .search-social input {
     width: auto; /* Set width to auto */
@@ -197,8 +212,8 @@ aside {
     width: 600px;
     height: 500px;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 40%;
+    left: 35%;
     transform: translate(-50%, -50%);
     z-index: 90;
 }
@@ -207,9 +222,9 @@ aside {
 #pathList {
     list-style-type: none; /* Remove list bullet points */
     padding: 0; /* Remove default padding */
-    width: 100%;
-    height: 80%;
     margin: 0; /* Remove default margin */
+    position: relative;
+    top: -10%;
     background-color: #ffffff; /* Set background color */
     border-radius: 10px; /* Set border radius */
     translate: 0px 80px;
@@ -240,50 +255,5 @@ aside {
 #pathList li:last-child {
     border-bottom: none; /* Remove bottom border from last item */
 }
-/* Styles for Form Elements */
-#pathForm label {
-    display: block; /* Display labels as blocks */
-    margin-bottom: 10px; /* Add bottom margin to labels */
-    font-weight: bold; /* Set font weight for labels */
-}
 
-#pathForm select[multiple] {
-    width: 100%; /* Set select width to fill the container */
-    padding: 8px; /* Add padding to the select */
-    border-radius: 5px; /* Set border radius for select */
-    border: 1px solid #ccc; /* Add border to select */
-    margin-bottom: 10px; /* Add bottom margin to select */
-    height: 150px; /* Set height for multiple select */
-    overflow-y: auto; /* Enable vertical scrolling if needed */
-}
 
-#pathForm button {
-    background-color: #ba0620; /* Set button background color */
-    color: #fff; /* Set button text color */
-    border: none; /* Remove button border */
-    padding: 10px 20px; /* Set button padding */
-    border-radius: 5px; /* Set button border radius */
-    cursor: pointer; /* Set cursor to pointer on hover */
-}
-
-#pathForm button:hover {
-    background-color: #e20d2d; /* Change button background color on hover */
-}
-
-/* Styles for Path Form */
-
-#pathForm {
-    margin-bottom: 1px; /* Add bottom margin to separate buttons */
-    width: 100%; /* Set form width */
-    max-width: 400px; /* Set maximum form width */
-    margin-top: 100%;
-    margin-left: 100%;
-    margin-right:15%;
-    padding: 20px; /* Add padding to the form */
-    translate: 1100px 0px;
-    background-color: #f2f2f2; /* Set form background color */
-    border-radius: 10px; /* Set form border radius */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add form shadow */
- }
-
- 

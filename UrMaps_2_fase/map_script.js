@@ -77,16 +77,31 @@ function dijkstra(graph, start, end) {
     return null; // Path not found
 }
 
-//variable de control demo
-var currentMediaType = 'image';
-const mapGraph = [  ['A', 'B', 5], ['A', 'E', 7], 
-                    ['B', 'C', 3], ['C', 'D', 2], 
-                    ['D', 'G', 4], ['G', 'F', 1], 
-                    ['F', 'E', 2], ['D', 'H', 6], 
-                    ['H', 'I', 3], ['H', 'J', 5]];
+/*
+const mapGrap = [
+    ['A', 'ABE', 2.5], ['ABE', 'B', 2.5], ['ABE', 'E', 3.5],
+    ['D', 'DHI', 3], ['DHI', 'H', 3], ['DHI', 'I', 1.5], ['DHI', 'IJ1', 1.5],
+    ['IJ1', 'IJ2', 2],
+    ['IJ2', 'J', 2.5],
+    ['B', 'C', 3],
+    ['C', 'D', 2],
+    ['D', 'G', 4],
+    ['G', 'F', 1],
+    ['F', 'E', 2]
+];*/
 
+const mapGraph = [
+    ['A', 'ABE', 2.5], ['ABE', 'B', 2.5], ['ABE', 'E', 3.5],
+    ['B', 'C', 3], ['C', 'D', 2], ['D', 'DHI', 3], 
+    ['D', 'G', 4], ['DHI', 'H', 3], ['DHI', 'I', 1.5], 
+    ['DHI', 'IJ1', 1.5], ['F', 'E', 2], ['G', 'F', 1],
+    ['IJ1', 'IJ2', 2], ['IJ2', 'J', 2.5]
+];
 
-const coordinates = {
+var path_test = dijkstra(mapGraph,"A","I");
+console.log(path_test["path"]);    
+
+/*const coordinates = {
     "A": { "x": 21, "y": 35},
     "B": {"x": 9,"y": 32},
     "C": {"x": 9,"y": 19},
@@ -97,8 +112,25 @@ const coordinates = {
     "H": {"x": 9,"y": -13},
     "I": {"x": 6,"y": -10},
     "J": {"x": 24,"y": -22}
-}
+}*/
 
+
+const path_coordinates ={
+    "A": { "x": 21, "y": 35},
+    "B": {"x": 9,"y": 32},
+    "C": {"x": 9,"y": 19},
+    "D": {"x": 9,"y": 9},
+    "E": {"x": 31,"y": 32},
+    "F": {"x": 31,"y": 21},
+    "G": {"x": 31,"y": 9},
+    "H": {"x": 9,"y": -13},
+    "I": {"x": 6,"y": -10},
+    "J": {"x": 24,"y": -22},
+    "ABE":{"x":21 , "y":32},
+    "DHI":{"x":9,"y":-10},
+    "IJ1":{"x":19,"y":-10},
+    "IJ2":{"x":19,"y":-22}
+}
 
 const names = [ ['A', 'Entrada'], ['B', 'Escalera Caldas'], 
                 ['C', 'Baños Carrasquilla'], ['D', 'Entrada Teatrino'], 
@@ -127,13 +159,24 @@ map.setMaxBounds(imageBounds);
 
 // Add a marker to the map
 
+let polyline = null;
+function visualization(start,end){
+    //var marker = L.marker([-22,19]).addTo(map);
+    
+    var path = dijkstra(mapGraph,start,end)["path"];
+    var polyline_coord = [];
+    //console.log(path);
+    for(let i = 0; i < path.length; i++){
+        //console.log(path_coordinates[path[i]]);
+        polyline_coord.push([path_coordinates[path[i]]["y"],path_coordinates[path[i]]["x"]]);
+    }
+    console.log(polyline_coord);
 
-
-var form = document.getElementById('pathForm');
-
-for(const [key, value] of Object.entries(coordinates)){
-    var marker = L.marker([coordinates[key]["y"],coordinates[key]["x"]]).addTo(map);
+    if(polyline){
+        map.removeLayer(polyline);
+    }
+    polyline = L.polyline(polyline_coord,{color:"blue"}).addTo(map);
+    //polyline.remove();
 }
 
-console.log("added markers");
-
+visualization("A","I");
