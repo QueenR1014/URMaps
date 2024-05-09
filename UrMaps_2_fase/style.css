@@ -3,10 +3,12 @@
 
 .gradiante {
     background-image: linear-gradient(to top, #801e1e 2%, #000000);
-    height: 100vh; /* Establece la altura al 50% del viewport height */
-    width: 100vw; /* Establece el ancho al 80% del viewport width */
+    height: 100%; /* Establece la altura al 50% del viewport height */
+    width: 100%; /* Establece el ancho al 80% del viewport width */
     position:fixed;
-    left: 15%;
+    z-index: -100;
+    left: 0;
+    top: 130px;
 }
 
 /* Path */
@@ -19,13 +21,17 @@
 }
 
 /* Header Styles */
-
+ header{
+    width: 100%;
+    height:130px;
+ }
 /* Navigation Title */
  .Nav-titulo {
     background-color: #000000; /* Set background color */
      display: flex; /* Use flexbox for layout */
      justify-content: center; /* Center horizontally */
      align-items: center; /* Center vertically */
+     width: 100%;
     height:130px;
     min-height: 90px; 
 
@@ -88,15 +94,7 @@ ul.dropdown-menu li a {
 /* Aside Styles */
 
 /* Sidebar */
-aside {
-    text-align: center; /* Center text */
-    width: 20%; /* Set width */
-    min-width: 60px; /* Set minimum width */
-    max-width: 15%; /* Set maximum width */
-    height: 100%; /* Take full height */
-    background-image: linear-gradient(to top, #801e1e 2%, #000000);
-    position: fixed; /* Position fixed */
-}
+
 
 .container-fluid {
     display: flex; /* Use flexbox for layout */
@@ -174,15 +172,15 @@ aside {
 
 /* Search and Social */
 
-.search-social{
-    margin-top: 0%;
-    width: 20%;
-    height: 5%;
-    position: absolute;
-    top: 5%;
-    left: 65%;
-
- }
+.search-social {
+    margin-top: 0%; /* Puedes ajustar esto según sea necesario */
+    width: 15%;
+    height: 100%;
+    position: absolute; /* Cambiado de relative a absolute */
+    right: 10%; /* Ajusta la posición derecha según sea necesario */
+    top: 54%; /* Ajusta la posición superior según sea necesario */
+    transform: translateY(-50%); /* Centra verticalmente el elemento */
+}
 
 .search-social input {
     width: auto; /* Set width to auto */
@@ -203,7 +201,7 @@ aside {
     width: 40px; /* Set width */
     height: 40px; /* Set height */
     border-radius: 50%; /* Make it round */
-    background-color: #d6d6d6; /* Set background color */
+    background-color: #ffffff; /* Set background color */
     padding: 8px; /* Set padding */
 }
 
@@ -212,36 +210,40 @@ aside {
     width: 600px;
     height: 500px;
     position: absolute;
-    top: 40%;
-    left: 35%;
-    transform: translate(-50%, -50%);
+    left: 40%;
+    transform: translateX(-50%) translateY(-50%);
     z-index: 90;
+    top: 50%; /* Centra verticalmente */
 }
 
 /* Styles for Path List Buttons */
+
+
+    
 #pathList {
     list-style-type: none; /* Remove list bullet points */
     padding: 0; /* Remove default padding */
     margin: 0; /* Remove default margin */
+    list-style-type: none; /* Remove list bullet points */
     position: relative;
-    top: -10%;
+    display: flex; /* Use flexbox */
+    flex-direction:row; /* Stack items vertically */
     background-color: #ffffff; /* Set background color */
     border-radius: 10px; /* Set border radius */
     translate: 0px 80px;
+    overflow: hidden;
 }
 
-#pathList li {
-    margin-bottom: 1px; /* Add bottom margin to separate buttons */
-}
+
 
 #pathList li button {
     display: block; /* Make it a block element */
-    width: 100%; /* Set width to fill the container */
+    width: 50%; /* Set width to fill the container */
     height: 100%;
-    padding: 15px; /* Set padding */
+    margin-left: 80px; /* Set margin */
     border: none; /* Remove default border */
     background-color: #ffffff; /* Set background color */
-    text-align: left; /* Align text to the left */
+    text-align: center; /* Align text to the left */
     cursor: pointer; /* Set cursor to pointer */
     transition: background-color 0.3s; /* Smooth transition for background color */
     border-radius: 10px; /* Set border radius */
