@@ -219,49 +219,139 @@ ul.dropdown-menu li a {
 /* Styles for Path List Buttons */
 
 
-    
 #pathList {
     list-style-type: none; /* Remove list bullet points */
     padding: 0; /* Remove default padding */
     margin: 0; /* Remove default margin */
-    list-style-type: none; /* Remove list bullet points */
     position: relative;
     display: flex; /* Use flexbox */
-    flex-direction:row; /* Stack items vertically */
+    flex-direction: row; /* Stack items horizontally */
     background-color: #000000; /* Set background color */
     border-radius: 10px; /* Set border radius */
-    translate: 0px 80px;
     overflow: hidden;
 }
 
+#pathList li {
+    margin-left: 80px; /* Set margin between hexagons */
+}
 
-
-#pathList li button {
-    display: block; /* Make it a block element */
-    width: 2%; /* Set width to fill the container */
-    height: 100%;
-    margin-left: 80px; /* Set margin */
-    border: none; /* Remove default border */
-    background-color: #801e1e; /* Set background color */
-    text-align: center; /* Align text to the left */
-    cursor: pointer; /* Set cursor to pointer */
-    transition: background-color 0.3s; /* Smooth transition for background color */
-    border-radius: 10px; /* Set border radius */
-    color: #ffffff;
-    font-family: "Graduate", serif;
-    font-weight: 90px;
-    font-style: normal;
-    outline: none; /* Remove outline on focus */
+.hexagon-item {
+    cursor: pointer;
+    width: 200px;
+    height: 173.20508px;
+    margin-left: -29px;
+    z-index: 0;
     position: relative;
-    
+    transform: rotate(30deg);
+    transition: transform 0.3s ease-in-out; /* Add transition effect */
 }
 
-#pathList li button:hover {
-    background-color: #f2f2f2; /* Change background color on hover */
+.hexagon-item:first-child {
+    margin-left: 0;
 }
 
-#pathList li:last-child {
-    border-bottom: none; /* Remove bottom border from last item */
+.hexagon-item:hover {
+    z-index: 1;
+    transform: rotate(30deg) scale(1.1); /* Scale up hexagon on hover */
 }
 
+.hex-item {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 100px;
+    height: 173.20508px;
+}
+
+.hex-content {
+    color: #fff;
+    display: flex; /* Usar flexbox */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    height: 180px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    transform: rotate(-30deg);
+    width: 156px;
+
+}
+
+.hex-content .icon {
+    display: block;
+    font-size: 36px;
+    line-height: 30px;
+    margin-bottom: 11px;
+}
+
+.hex-content .title {
+    display: block;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+.hex-content svg {
+    left: -7px;
+    position: absolute;
+    top: -13px;
+    transform: scale(0.87);
+    z-index: -1;
+    transition: transform 0.3s ease-in-out; /* Add transition effect */
+}
+
+.hexagon-item:first-child {
+    margin-left: 0;
+}
+
+.pt-table.desktop-768 .pt-tablecell {
+    padding-bottom: 110px;
+    padding-top: 60px;
+}
+
+
+
+.hexagon-item:hover .icon i
+{
+  color:#ff0037;
+  transition:0.6s;
+  
+}
+
+
+.hexagon-item:hover .title
+{
+  -webkit-animation: focus-in-contract 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: focus-in-contract 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+/***************************/
+
+@-webkit-keyframes focus-in-contract {
+  0% {
+    letter-spacing: 1em;
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes focus-in-contract {
+  0% {
+    letter-spacing: 1em;
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
 
