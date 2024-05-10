@@ -84,7 +84,7 @@ margin-left: 10px
     font-size: 16px; /* Set font size */
     min-width: 60px; /* Set minimum width */
     max-height: 50px; /* Set maximum height */
-    overflow-y: auto; /* Enable vertical overflow scrolling */
+
 }
 
 ul.dropdown-menu li a {
@@ -175,10 +175,10 @@ ul.dropdown-menu li a {
 .search-social {
     margin-top: 0%; /* Puedes ajustar esto según sea necesario */
     width: 15%;
-    height: 100%;
+    height: 10%;
     position: absolute; /* Cambiado de relative a absolute */
-    right: 10%; /* Ajusta la posición derecha según sea necesario */
-    top: 54%; /* Ajusta la posición superior según sea necesario */
+    right: 5%; /* Ajusta la posición derecha según sea necesario */
+    top: 9%; /* Ajusta la posición superior según sea necesario */
     transform: translateY(-50%); /* Centra verticalmente el elemento */
 }
 
@@ -208,9 +208,9 @@ ul.dropdown-menu li a {
 /* Map Styles*/
 #map {
     width: 600px;
-    height: 500px;
+    height: 600px;
     position: absolute;
-    left: 40%;
+    left: 20%;
     transform: translateX(-50%) translateY(-50%);
     z-index: 90;
     top: 50%; /* Centra verticalmente */
@@ -228,7 +228,7 @@ ul.dropdown-menu li a {
     position: relative;
     display: flex; /* Use flexbox */
     flex-direction:row; /* Stack items vertically */
-    background-color: #ffffff; /* Set background color */
+    background-color: #000000; /* Set background color */
     border-radius: 10px; /* Set border radius */
     translate: 0px 80px;
     overflow: hidden;
@@ -238,16 +238,22 @@ ul.dropdown-menu li a {
 
 #pathList li button {
     display: block; /* Make it a block element */
-    width: 50%; /* Set width to fill the container */
+    width: 2%; /* Set width to fill the container */
     height: 100%;
     margin-left: 80px; /* Set margin */
     border: none; /* Remove default border */
-    background-color: #ffffff; /* Set background color */
+    background-color: #801e1e; /* Set background color */
     text-align: center; /* Align text to the left */
     cursor: pointer; /* Set cursor to pointer */
     transition: background-color 0.3s; /* Smooth transition for background color */
     border-radius: 10px; /* Set border radius */
+    color: #ffffff;
+    font-family: "Graduate", serif;
+    font-weight: 90px;
+    font-style: normal;
     outline: none; /* Remove outline on focus */
+    position: relative;
+    
 }
 
 #pathList li button:hover {
