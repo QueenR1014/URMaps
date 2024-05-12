@@ -18,10 +18,12 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Estilos personalizados -->
     <link rel="stylesheet" href="style.css">
-    <!-- Fuente de texto para el encabezado -->
+    <!-- Fuente de texto -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nabla&family=Nova+Cut&family=Ropa+Sans:ital@0;1&family=Varela+Round&display=swap"
+        rel="stylesheet">
     <!-- Hojas de estilos para Leaflet (mapa) -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
@@ -74,10 +76,9 @@
             <!-- Barra de búsqueda -->
             <!-- Botones de redes sociales -->
             <div class="social-icons">
-                <button class="btn btn-primary rounded-circle" href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                <button class="btn btn-primary rounded-circle" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
                     <img src="buttons/facebook.png" alt="Facebook"></button>
-                <button class="btn btn-primary rounded-circle"><img src="buttons/twitter.png"
-                        alt="Twitter"></button>
+                <button class="btn btn-primary rounded-circle"><img src="buttons/twitter.png" alt="Twitter"></button>
                 <button class="btn btn-primary rounded-circle"><img src="buttons/instagram.png"
                         alt="Instagram"></button>
             </div>
@@ -92,243 +93,270 @@
 
 
             <!-- Sección de búsqueda y redes sociales -->
-            
 
-                <!-- Menú lateral -->
 
-                <!-- Mapa -->
-                <section>
-                    <div id="map"></div>
-                </section>
+            <!-- Menú lateral -->
 
-                
+            <!-- Mapa -->
+            <section>
+                <div id="map"></div>
+            </section>
 
-                <!-- Botón para mostrar menú -->
 
-                
-                    <ul id="pathList">
-                        <li>
-                            <div class="hexagon-item">
-                                <div class="hex-item">
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                                <div class="hex-item">
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                                <a href="#" class="hex-content" id="m2">
-                                    <span class="hex-content-inner">
-                                        <span class="title"><b>Entrada</b></span>
-                                    </span>
-                                    <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path>
-                                    </svg>
-                                </a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="hexagon-item">
-                                <div class="hex-item">
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                                <div class="hex-item">
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                                <a href="#" class="hex-content" id="m3">
-                                    <span class="hex-content-inner">
 
-                                        <span class="title"><b>Escalera Caldas</b></span>
-                                    </span>
-                                    <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path>
-                                    </svg>
-                                </a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="hexagon-item">
-                                <div class="hex-item">
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                                <div class="hex-item">
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                                <a href="#" class="hex-content" id="m4">
-                                    <span class="hex-content-inner">
-                                        <span class="title"><b>Baños Carrasquilla</b></span>
-                                    </span>
-                                    <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path>
-                                    </svg>
-                                </a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="hexagon-item">
-                                <div class="hex-item">
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                                <div class="hex-item">
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                                <a href="#" class="hex-content" id="m5">
-                                    <span class="hex-content-inner">
-                                        <span class="title"><b>Entrada Teatrino</b></span>
-                                    </span>
-                                    <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path>
-                                    </svg>
-                                </a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="hexagon-item">
-                                <div class="hex-item">
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                                <div class="hex-item">
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                                <a href="#" class="hex-content" id="m6">
-                                    <span class="hex-content-inner">
-                                        <span class="title"><b>Síndico</b></span>
-                                    </span>
-                                    <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path>
-                                    </svg>
-                                </a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="hexagon-item">
-                                <div class="hex-item">
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                                <div class="hex-item">
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                                <a href="#" class="hex-content" id="m7">
-                                    <span class="hex-content-inner">
-                                        <span class="title"><b>Aula Mutis</b></span>
-                                    </span>
-                                    <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path>
-                                    </svg>
-                                </a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="hexagon-item">
-                                <div class="hex-item">
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                                <div class="hex-item">
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                                <a href="#" class="hex-content" id="m8">
-                                    <span class="hex-content-inner">
-                                        <span class="title"><b>Cuenteros</b></span>
-                                    </span>
-                                    <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path>
-                                    </svg>
-                                </a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="hexagon-item">
-                                <div class="hex-item">
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                                <div class="hex-item">
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                                <a href="#" class="hex-content" id="m9">
-                                    <span class="hex-content-inner">
+            <!-- Botón para mostrar menú -->
 
-                                        <span class="title"><b>Escaleras Casur</b></span>
-                                    </span>
-                                    <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path>
-                                    </svg>
-                                </a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="hexagon-item">
-                                <div class="hex-item">
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                                <div class="hex-item">
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                                <a href="#" class="hex-content" id="m10">
-                                    <span class="hex-content-inner">
-                                        <span class="title"><b>Comedor</b></span>
-                                    </span>
-                                    <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path>
-                                    </svg>
-                                </a>
-                            </div>
-                        </li>
-        
-                        <!-- Repite lo mismo para los demás botones hexagonales -->
-                        <!-- No olvides cambiar los ID de los botones según sea necesario -->
-                    </ul>
+
+            <ul id="pathList">
+                <li>
+                    <div class="hexagon-item">
+                        <div class="hex-item">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="hex-item">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <a href="#" class="hex-content" id="m2">
+                            <span class="hex-content-inner">
+                                <span class="title"><b>Entrada</b></span>
+                            </span>
+                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z"
+                                    fill="#1e2530"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="hexagon-item">
+                        <div class="hex-item">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="hex-item">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <a href="#" class="hex-content" id="m3">
+                            <span class="hex-content-inner">
+
+                                <span class="title"><b>Escalera Caldas</b></span>
+                            </span>
+                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z"
+                                    fill="#1e2530"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="hexagon-item">
+                        <div class="hex-item">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="hex-item">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <a href="#" class="hex-content" id="m4">
+                            <span class="hex-content-inner">
+                                <span class="title"><b>Baños Carrasquilla</b></span>
+                            </span>
+                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z"
+                                    fill="#1e2530"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="hexagon-item">
+                        <div class="hex-item">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="hex-item">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <a href="#" class="hex-content" id="m5">
+                            <span class="hex-content-inner">
+                                <span class="title"><b>Entrada Teatrino</b></span>
+                            </span>
+                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z"
+                                    fill="#1e2530"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="hexagon-item">
+                        <div class="hex-item">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="hex-item">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <a href="#" class="hex-content" id="m6">
+                            <span class="hex-content-inner">
+                                <span class="title"><b>Síndico</b></span>
+                            </span>
+                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z"
+                                    fill="#1e2530"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="hexagon-item">
+                        <div class="hex-item">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="hex-item">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <a href="#" class="hex-content" id="m7">
+                            <span class="hex-content-inner">
+                                <span class="title"><b>Aula Mutis</b></span>
+                            </span>
+                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z"
+                                    fill="#1e2530"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="hexagon-item">
+                        <div class="hex-item">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="hex-item">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <a href="#" class="hex-content" id="m8">
+                            <span class="hex-content-inner">
+                                <span class="title"><b>Cuenteros</b></span>
+                            </span>
+                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z"
+                                    fill="#1e2530"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="hexagon-item">
+                        <div class="hex-item">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="hex-item">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <a href="#" class="hex-content" id="m9">
+                            <span class="hex-content-inner">
+
+                                <span class="title"><b>Escaleras Casur</b></span>
+                            </span>
+                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z"
+                                    fill="#1e2530"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="hexagon-item">
+                        <div class="hex-item">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="hex-item">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <a href="#" class="hex-content" id="m10">
+                            <span class="hex-content-inner">
+                                <span class="title"><b>Comedor</b></span>
+                            </span>
+                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z"
+                                    fill="#1e2530"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </li>
+
+                <!-- Repite lo mismo para los demás botones hexagonales -->
+                <!-- No olvides cambiar los ID de los botones según sea necesario -->
+            </ul>
 
             <script src="items_script.js"></script>
 
 
             <div class="info-l">
-                
-
-            </div>
-
-                <!-- Script para el formulario de búsqueda -->
-                <script src="map_script.js"></script>
-
-                <script src="Button_script.js"></script>
-
 
 
             </div>
-        
+
+            <!-- Script para el formulario de búsqueda -->
+            <script src="map_script.js"></script>
+
+            <script src="Button_script.js"></script>
+
+
+
+        </div>
+
     </main>
 
 </body>
