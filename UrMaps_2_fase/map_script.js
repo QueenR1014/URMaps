@@ -98,8 +98,8 @@ const mapGraph = [
     ['IJ1', 'IJ2', 2], ['IJ2', 'J', 2.5]
 ];
 
-var path_test = dijkstra(mapGraph,"A","I");
-console.log(path_test["path"]);    
+/*var path_test = dijkstra(mapGraph,"A","I");
+console.log(path_test["path"]);    */
 
 /*const coordinates = {
     "A": { "x": 21, "y": 35},
@@ -132,11 +132,18 @@ const path_coordinates ={
     "IJ2":{"x":19,"y":-22}
 }
 
-const names = [ ['A', 'Entrada'], ['B', 'Escalera Caldas'], 
-                ['C', 'Baños Carrasquilla'], ['D', 'Entrada Teatrino'], 
-                ['E', 'Síndico'], ['F', 'Aula Mutis'], 
-                ['G','La Bordadita'], ['H','Cuenteros'], 
-                ['I', 'Escaleras Casur'], ['J','Comedor']];   
+const names = {
+    'A': 'Entrada',
+    'B': 'Escalera Caldas',
+    'C': 'Baños Carrasquilla',
+    'D': 'Entrada Teatrino',
+    'E': 'Síndico',
+    'F': 'Aula Mutis',
+    'G': 'La Bordadita',
+    'H': 'Cuenteros',
+    'I': 'Escaleras Casur',
+    'J': 'Comedor'
+}  
 
 
 // Map visualization
@@ -175,8 +182,19 @@ function visualization(start,end){
     if(polyline){
         map.removeLayer(polyline);
     }
-    polyline = L.polyline(polyline_coord,{color:"blue"}).addTo(map);
+    polyline = L.polyline(polyline_coord,{color:"#ba0620",weight:5}).addTo(map);
     //polyline.remove();
+
+     // Add a label (tooltip) to the polyline
+     polyline.bindTooltip(names[end]);
+    console.log(names[end]);
+     // Define tooltip behavior on hover
+     polyline.on('mouseover', function (e) {
+         this.openTooltip();
+     });
+     polyline.on('mouseout', function (e) {
+         this.closeTooltip();
+     });
 }
 
 visualization("A","I");
