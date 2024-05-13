@@ -149,7 +149,7 @@ const names = {
 // Map visualization
 
 var map = L.map('map').setView([0, 0], 3);
-var imageMap = 'Mapa/Mapapato.png';
+var imageMap = 'Mapapato.png';
 
 // Load the image overlay with specific bounds
 var imageUrl = imageMap;
@@ -200,4 +200,4 @@ function visualization(start,end){
 //visualization("A","I");
 
 //actualización marcadores mapa
-var marker = L.marker([0,0]).addTo(map);
+var marker = L.marker([-34,-20]).addTo(map);
