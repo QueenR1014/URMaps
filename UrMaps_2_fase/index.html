@@ -19,10 +19,11 @@
     <!-- Estilos personalizados -->
     <link rel="stylesheet" href="style.css">
     <!-- Fuente de texto -->
+    <!--Merriweather y Karla-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Nabla&family=Nova+Cut&family=Ropa+Sans:ital@0;1&family=Varela+Round&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
         rel="stylesheet">
     <!-- Hojas de estilos para Leaflet (mapa) -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
@@ -60,61 +61,17 @@
         <!-- Sección de cambio de idioma -->
         <section>
             <div class="dropdown-center">
-                <button id="languageButton" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
                     ES
                 </button>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#" data-lang="en">EN</a></li>
-                    <li><a class="dropdown-item" href="#" data-lang="es">ES</a></li>
-                    <li><a class="dropdown-item" href="#" data-lang="fr">FR</a></li>
+                    <li><a class="dropdown-item" href="#" data-lang="EN">EN</a></li>
+                    <li><a class="dropdown-item" href="#" data-lang="ES">ES</a></li>
+                    <li><a class="dropdown-item" href="#" data-lang="ES">FR</a></li>
                 </ul>
             </div>
         </section>
-        
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                let traducciones = [];
-                
-                // Cargar el archivo JSON
-                fetch('traducciones.json')
-                    .then(response => response.json())
-                    .then(data => {
-                        traducciones = data;
-                        cambiarIdioma('es'); // Idioma por defecto
-                    });
-        
-                function cambiarIdioma(idioma) {
-                    const idiomaMap = {
-                        'es': 'Español',
-                        'en': 'Inglés',
-                        'fr': 'Francés'
-                    };
-        
-                    // Actualizar el texto de los elementos traducidos
-                    traducciones.forEach(item => {
-                        const element = document.getElementById(item.Clave);
-                        if (element) {
-                            element.textContent = item[idiomaMap[idioma]];
-                        }
-                    });
-        
-                    // Actualizar el texto del botón
-                    const languageButton = document.getElementById('languageButton');
-                    languageButton.textContent = idioma.toUpperCase();
-                }
-        
-                // Manejar el clic en los elementos del menú desplegable
-                document.querySelectorAll('.dropdown-item').forEach(item => {
-                    item.addEventListener('click', event => {
-                        event.preventDefault(); // Prevenir el comportamiento por defecto del enlace
-                        const lang = event.target.getAttribute('data-lang');
-                        cambiarIdioma(lang);
-                    });
-                });
-            });
-        </script>
-        
-        <!-- fin traduccion -->
 
         <section class="search-social">
             <!-- Barra de búsqueda -->
@@ -166,7 +123,7 @@
                         </div>
                         <a href="#" class="hex-content" id="m2">
                             <span class="hex-content-inner">
-                                <span class="title" id="Entrada"><b>Entrada</b></span>
+                                <span class="title"><b>Entrada</b></span>
                             </span>
                             <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -192,7 +149,7 @@
                         <a href="#" class="hex-content" id="m3">
                             <span class="hex-content-inner">
 
-                                <span class="title" id="EscaleraCaldas"><b>Escalera Caldas</b></span>
+                                <span class="title"><b>Escalera Caldas</b></span>
                             </span>
                             <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -217,7 +174,7 @@
                         </div>
                         <a href="#" class="hex-content" id="m4">
                             <span class="hex-content-inner">
-                                <span class="title" id="BañosClaustroColonial"><b>Baños Carrasquilla</b></span>
+                                <span class="title"><b>Baños Carrasquilla</b></span>
                             </span>
                             <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -242,7 +199,7 @@
                         </div>
                         <a href="#" class="hex-content" id="m5">
                             <span class="hex-content-inner">
-                                <span class="title" id="EntradaTeatrino"><b>Entrada Teatrino</b></span>
+                                <span class="title"><b>Entrada Teatrino</b></span>
                             </span>
                             <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -267,7 +224,7 @@
                         </div>
                         <a href="#" class="hex-content" id="m6">
                             <span class="hex-content-inner">
-                                <span class="title" id="Síndico"><b>Síndico</b></span>
+                                <span class="title"><b>Síndico</b></span>
                             </span>
                             <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -292,7 +249,7 @@
                         </div>
                         <a href="#" class="hex-content" id="m7">
                             <span class="hex-content-inner">
-                                <span class="title" id="AulaMutis"><b>Aula Mutis</b></span>
+                                <span class="title"><b>Aula Mutis</b></span>
                             </span>
                             <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -317,7 +274,7 @@
                         </div>
                         <a href="#" class="hex-content" id="m8">
                             <span class="hex-content-inner">
-                                <span class="title" id="PlazaCuenteros"><b>Cuenteros</b></span>
+                                <span class="title"><b>Cuenteros</b></span>
                             </span>
                             <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -343,7 +300,7 @@
                         <a href="#" class="hex-content" id="m9">
                             <span class="hex-content-inner">
 
-                                <span class="title" id="EscalerasCASUR"><b>Escaleras Casur</b></span>
+                                <span class="title"><b>Escaleras Casur</b></span>
                             </span>
                             <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -368,7 +325,7 @@
                         </div>
                         <a href="#" class="hex-content" id="m10">
                             <span class="hex-content-inner">
-                                <span class="title" id="Comedor"><b>Comedor</b></span>
+                                <span class="title"><b>Comedor</b></span>
                             </span>
                             <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -386,12 +343,6 @@
 
             <script src="items_script.js"></script>
 
-
-            <div class="info-l">
-
-
-            </div>
-
             <!-- Script para el formulario de búsqueda -->
             <script src="map_script.js"></script>
 
@@ -403,8 +354,8 @@
         <!-- Rectángulo con la info momento -->
 
         <div class="rectangle">
-            <div class="recttitle" id="ComedorT" >Comedor</div>
-            <div class="rectcontent" id="desc_Comedor">Juntando zonas de bienestar, estudio y esparcimiento, contrasta su estilo como
+            <div class="recttitle">Comedor</div>
+            <div class="rectcontent">Juntando zonas de bienestar, estudio y esparcimiento, contrasta su estilo como
                 parte del Claustro Republicano con la corriente moderna de la universidad.
             </div>
         </div>
