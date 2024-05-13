@@ -203,8 +203,8 @@ ul.dropdown-menu li a {
 
 /* Map Styles*/
 #map {
-    width: 25vw;
-    height: calc(40vw * 9 / 16);
+    width: 600px;
+    height: 600px;
     position: absolute;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
@@ -216,10 +216,10 @@ ul.dropdown-menu li a {
 
 #pathList {
     list-style-type: none;
-    height: 30vh; /* Establece la altura al 25% del viewport height */
-    width: 90vw; /* Establece el ancho al 80% del viewport width */
+    height: 25%; /* Establece la altura al 50% del viewport height */
+    width: 100%; /* Establece el ancho al 80% del viewport width */
     padding: 0;
-    margin: 0 auto;
+    margin: 0;
     position: relative; /* Cambiado a relativo para que el z-index funcione */
     display: flex;
     flex-direction: row;
@@ -231,9 +231,8 @@ ul.dropdown-menu li a {
 
 
 #pathList li {
-    margin-left: 5vw; /* Set margin between hexagons */
-    height: calc(25vh / 2);
-    flex: 1;
+    margin-left: 80px; /* Set margin between hexagons */
+    height: 80px;
 }
 
 
@@ -251,13 +250,13 @@ ul.dropdown-menu li a {
 /* Importante*/
 .hexagon-item {
   cursor: pointer;
-  width: calc(100% - 10px);
-  height: 100%;
+  width: 200px;
+  height: 173.20508px;
   float: left;
   margin-left: -29px;
   z-index: 0;
   position: relative;
-  top:30%;
+  top:40%;
   -webkit-transform: rotate(30deg);
   -moz-transform: rotate(30deg);
   -ms-transform: rotate(30deg);
@@ -304,7 +303,7 @@ ul.dropdown-menu li a {
   top: 0;
   left: 50px;
   width: 100px;
-  height: 100%; }
+  height: 173.20508px; }
   .hex-item:first-child {
     z-index: 0;
     -webkit-transform: scale(0.9);
@@ -324,7 +323,7 @@ ul.dropdown-menu li a {
     position: absolute;
     top: 0;
     width: 100px;
-    height: 88%;
+    height: 173.20508px;
     -webkit-transform-origin: center center;
     -moz-transform-origin: center center;
     -ms-transform-origin: center center;
@@ -457,10 +456,3 @@ ul.dropdown-menu li a {
   }
 }
 
-@media screen and (max-aspect-ratio: 16/9) {
-  /* Estilos específicos para pantallas más anchas */
-}
-
-@media screen and (min-aspect-ratio: 16/9) {
-  /* Estilos específicos para pantallas más estrechas */
-}
