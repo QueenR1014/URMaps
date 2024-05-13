@@ -108,6 +108,10 @@ ul.dropdown-menu li a {
   z-index: 100;
 }
 
+.btn-secondary:hover {
+  background-color: #5c1919;
+}
+
 .Button .btn {
   min-width: 60px;
   min-height: 60px;
@@ -169,12 +173,12 @@ ul.dropdown-menu li a {
 /* Search and Social */
 
 .search-social {
-  margin-top: 0%; /* Puedes ajustar esto según sea necesario */
-  width: 15%;
-  height: 10%;
-  position: absolute; /* Cambiado de relative a absolute */
+  margin-top: 0; /* Puedes ajustar esto según sea necesario */
+  width: 15%; /* Ancho del 15% de la ventana gráfica */
+  height: auto; /* Altura automática para que se ajuste al contenido */
+  position: fixed; /* Mantener fijo en la ventana */
   right: 5%; /* Ajusta la posición derecha según sea necesario */
-  top: 9%; /* Ajusta la posición superior según sea necesario */
+  top: 6%; /* Ajusta la posición superior según sea necesario */
   transform: translateY(-50%); /* Centra verticalmente el elemento */
 }
 
@@ -189,8 +193,12 @@ ul.dropdown-menu li a {
 
 .social-icons .btn {
   margin: 0.5px; /* Set margin */
-  background-color: transparent; /* Set background color to transparent */
+  background-color: transparent; /* Set background color */
   border: none; /* Remove border */
+  width: 40px; /* Mismo ancho que la imagen */
+  height: 40px; /* Mismo alto que la imagen */
+  display: inline-block; /* Display inline block */
+
 }
 
 .social-icons .btn img {
@@ -205,10 +213,9 @@ ul.dropdown-menu li a {
 #map {
     width: 25vw;
     height: calc(40vw * 9/16);  
-    position: absolute;
+    position: fixed;
     left: 35%;
     z-index: 90;
-    top: 30%; /* Centra verticalmente */
 }
 
 /* Styles for Path List Buttons */
@@ -459,7 +466,7 @@ transition:0.6s;
 
 /*Rectángulo con información*/
 .rectangle {
-  background-color: white;
+  background-color: rgba(73, 7, 7, 0.0);;
   border-radius: 10px; /* Adjust the value to change the roundness */
   padding: 20px; /* Add padding to give space for text */
   width: 25vw;
@@ -467,7 +474,7 @@ transition:0.6s;
   position: fixed; /* Position it relative to the viewport */
   right: 10%;
   z-index: 90;
-  top: 43%; /* Centra verticalmente */
+  top: 45%; /* Centra verticalmente */
   display: flex; /* Use flexbox */
   flex-direction: column; /* Arrange children vertically */
   justify-content: center; /* Center content vertically */
@@ -480,10 +487,11 @@ transition:0.6s;
   font-family: "Karla", sans-serif;
   font-optical-sizing: auto;
   font-size: 2vw; /* Adjust font size based on viewport width */
+  color:#f5f3f3;
 }
 
 .rectcontent {
-  color: #080808; /*Color del texto*/
+  color: #f5f3f3; /*Color del texto*/
   font-size: 1.5vw; /* Adjust font size based on viewport width */
   font-family: "Merriweather", serif;
   text-align: justify;
@@ -500,7 +508,7 @@ transition:0.6s;
   overflow: hidden;
   right: 69%; /* Adjust to position it to the left */
   z-index: 90; /* Ensure it's above other content */
-  top: 43%; /* Center vertically */
+  top: 50%; /* Center vertically */
 }
 
 /* Slider list styles */
@@ -571,6 +579,15 @@ transition:0.6s;
 /* Active dot style */
 .slide-slider .slide-dots li.active {
   width: 30px; /* Increase size of active dot */
+}
+
+/*Centrar los elementos del main dinamicamente*/
+
+.rectangle,
+.slide-slider,
+#map {
+  top: 70%;
+  transform: translateY(-50%);
 }
 
 @media screen and (max-width: 25vw){
