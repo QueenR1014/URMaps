@@ -108,6 +108,10 @@ ul.dropdown-menu li a {
   z-index: 100;
 }
 
+.btn-secondary:hover {
+  background-color: #5c1919;
+}
+
 .Button .btn {
   min-width: 60px;
   min-height: 60px;
@@ -172,9 +176,9 @@ ul.dropdown-menu li a {
   margin-top: 0%; /* Puedes ajustar esto según sea necesario */
   width: 15%;
   height: 10%;
-  position: absolute; /* Cambiado de relative a absolute */
-  right: 5%; /* Ajusta la posición derecha según sea necesario */
-  top: 9%; /* Ajusta la posición superior según sea necesario */
+  position: fixed; /* Cambiado de relative a absolute */
+  right: 16vh; /* Ajusta la posición derecha según sea necesario */
+  top: 10vh; /* Ajusta la posición superior según sea necesario */
   transform: translateY(-50%); /* Centra verticalmente el elemento */
 }
 
@@ -208,7 +212,6 @@ ul.dropdown-menu li a {
     position: fixed;
     left: 35%;
     z-index: 90;
-
 }
 
 /* Styles for Path List Buttons */
@@ -568,6 +571,8 @@ transition:0.6s;
 .slide-slider .slide-dots li.active {
   width: 30px; /* Increase size of active dot */
 }
+
+/*Centrar los elementos del main dinamicamente*/
 
 .rectangle,
 .slide-slider,
