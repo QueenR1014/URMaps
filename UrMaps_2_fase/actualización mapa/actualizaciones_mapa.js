@@ -117,19 +117,21 @@ console.log(path_test["path"]);    */
 
 const path_coordinates = {
     "A": [-20, -34], //checked
-    "B": [9, 32],
-    "C": [9, 19],
-    "D": [9, 9],
-    "E": [31, 32],
-    "F": [31, 21],
-    "G": [31, 9],
-    "H": [9, -13],
-    "I": [6, -10],
-    "J": [24, -22],
-    "ABE": [21, 32],
-    "DHI": [9, -10],
-    "IJ1": [19, -10],
-    "IJ2": [19, -22]
+    "B": [-13, -30],
+    "C": [-3, -17],
+    "D": [-9, -8],
+    "E": [-32, -30],
+    "F": [-32, -18],
+    "G": [-32, -10],
+    "H": [-6, 16],
+    "I": [-4, 10],
+    "J": [-25, 16],
+    "BD": [-9, -30],
+    "IJ": [-25, 10],
+    "HI": [-6, 10],
+    "ABE": [-20, -30],
+    "BDC": [-9, -17],
+    "DJI": [-9, 10]
 };
 
 const names = {
@@ -200,4 +202,4 @@ function visualization(start,end){
 //visualization("A","I");
 
 //actualización marcadores mapa
-var marker = L.marker([-34,-20]).addTo(map);
+var marker = L.marker([10 ,-9]).addTo(map);
