@@ -138,7 +138,7 @@ const path_coordinates = {
 const names = {
     'A': 'Entrada',
     'B': 'Escalera Caldas',
-    'C': 'Baños Carrasquilla',
+    'C': 'Baños Claustro',
     'D': 'Entrada Teatrino',
     'E': 'Síndico',
     'F': 'Aula Mutis',
@@ -198,6 +198,8 @@ function visualization(start,end){
      polyline.on('mouseout', function (e) {
          this.closeTooltip();
      });
+
+     map.fitBounds(polyline.getBounds());
 }
 
 visualization("A","I");
