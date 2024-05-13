@@ -206,7 +206,7 @@ ul.dropdown-menu li a {
     width: 25vw;
     height: calc(40vw * 9 / 16);
     position: absolute;
-    left: 20%;
+    left: 50%;
     transform: translateX(-50%) translateY(-50%);
     z-index: 90;
     top: 55%; /* Centra verticalmente */
