@@ -203,6 +203,7 @@ ul.dropdown-menu li a {
 
 /* Map Styles*/
 #map {
+<<<<<<< HEAD
   width: 25vw;
   height: calc(40vw * 9 / 16);
   position: absolute;
@@ -210,11 +211,21 @@ ul.dropdown-menu li a {
   transform: translateX(-50%) translateY(-50%);
   z-index: 90;
   top: 55%; /* Centra verticalmente */
+=======
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    left: 20%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 90;
+    top: 55%; /* Centra verticalmente */
+>>>>>>> parent of db4ecb9 (ajustes en el dinamismo de la pag(main))
 }
 
 /* Styles for Path List Buttons */
 
 #pathList {
+<<<<<<< HEAD
   list-style-type: none;
   height: 30vh; /* Establece la altura al 25% del viewport height */
   width: 90vw; /* Establece el ancho al 80% del viewport width */
@@ -227,13 +238,32 @@ ul.dropdown-menu li a {
   border-radius: 10px;
   overflow: hidden;
   z-index: 9999 !important; /* Selecciona un valor alto para asegurarte de que esté encima de todo */
+=======
+    list-style-type: none;
+    height: 25%; /* Establece la altura al 50% del viewport height */
+    width: 100%; /* Establece el ancho al 80% del viewport width */
+    padding: 0;
+    margin: 0;
+    position: relative; /* Cambiado a relativo para que el z-index funcione */
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 9999 !important; /* Selecciona un valor alto para asegurarte de que esté encima de todo */
+>>>>>>> parent of db4ecb9 (ajustes en el dinamismo de la pag(main))
 }
 
 
 #pathList li {
+<<<<<<< HEAD
   margin-left: 5vw; /* Set margin between hexagons */
   height: calc(25vh / 2);
   flex: 1;
+=======
+    margin-left: 80px; /* Set margin between hexagons */
+    height: 80px;
+>>>>>>> parent of db4ecb9 (ajustes en el dinamismo de la pag(main))
 }
 
 
@@ -250,6 +280,7 @@ ul.dropdown-menu li a {
 
 /* Importante*/
 .hexagon-item {
+<<<<<<< HEAD
 cursor: pointer;
 width: calc(100% - 10px);
 height: 100%;
@@ -275,6 +306,23 @@ transform: rotate(30deg); }
     -ms-transform: scale(1.3);
     -o-transform: scale(1.3);
     transform: scale(1.3); 
+=======
+  cursor: pointer;
+  width: 200px;
+  height: 173.20508px;
+  float: left;
+  margin-left: -29px;
+  z-index: 0;
+  position: relative;
+  top:40%;
+  -webkit-transform: rotate(30deg);
+  -moz-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  -o-transform: rotate(30deg);
+  transform: rotate(30deg); }
+  .hexagon-item:first-child {
+    margin-left: 0;
+>>>>>>> parent of db4ecb9 (ajustes en el dinamismo de la pag(main))
   }
   .hexagon-item:hover .hex-item:first-child {
     opacity: 1;
@@ -324,6 +372,7 @@ height: 100%; }
   position: absolute;
   top: 0;
   width: 100px;
+<<<<<<< HEAD
   height: 88%;
   -webkit-transform-origin: center center;
   -moz-transform-origin: center center;
@@ -336,6 +385,105 @@ height: 100%; }
     position: absolute;
     width: 100%;
     height: 3px;
+=======
+  height: 173.20508px; }
+  .hex-item:first-child {
+    z-index: 0;
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    transform: scale(0.9);
+    -webkit-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    -moz-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    -o-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1); }
+  .hex-item:last-child {
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    z-index: 1; }
+  .hex-item div {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 173.20508px;
+    -webkit-transform-origin: center center;
+    -moz-transform-origin: center center;
+    -ms-transform-origin: center center;
+    -o-transform-origin: center center;
+    transform-origin: center center; }
+    .hex-item div::before, .hex-item div::after {
+      background-color: #080808;
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      -webkit-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+      -moz-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+      -o-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+      transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) 0s; }
+    .hex-item div:before {
+      top: 0; }
+    .hex-item div:after {
+      bottom: 0; }
+    .hex-item div:nth-child(1) {
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg); }
+    .hex-item div:nth-child(2) {
+      -webkit-transform: rotate(60deg);
+      -moz-transform: rotate(60deg);
+      -ms-transform: rotate(60deg);
+      -o-transform: rotate(60deg);
+      transform: rotate(60deg); }
+    .hex-item div:nth-child(3) {
+      -webkit-transform: rotate(120deg);
+      -moz-transform: rotate(120deg);
+      -ms-transform: rotate(120deg);
+      -o-transform: rotate(120deg);
+      transform: rotate(120deg); }
+
+      /*Contenido de los hexa*/
+.hex-content {
+  color: #fff;
+  display: block;
+  height: 180px;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  transform: rotate(-30deg);
+  width: 156px; }
+  .hex-content .hex-content-inner {
+    left: 50%;
+    margin: -3px 0 0 2px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+  .hex-content .icon {
+    display: block;
+    font-size: 36px;
+    line-height: 30px;
+    margin-bottom: 11px; }
+  .hex-content .title {
+    display: block;
+    font-family: "Nova Cut", system-ui;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 24px;
+    text-transform: uppercase; }
+  .hex-content svg {
+    left: -7px;
+    position: absolute;
+    top: -13px;
+    transform: scale(0.87);
+    z-index: -1;
+>>>>>>> parent of db4ecb9 (ajustes en el dinamismo de la pag(main))
     -webkit-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
     -moz-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
     -o-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
@@ -457,6 +605,7 @@ transition:0.6s;
 }
 }
 
+<<<<<<< HEAD
 @media screen and (max-aspect-ratio: 16/9) {
 /* Estilos específicos para pantallas más anchas */
 }
@@ -464,3 +613,5 @@ transition:0.6s;
 @media screen and (min-aspect-ratio: 16/9) {
 /* Estilos específicos para pantallas más estrechas */
 }
+=======
+>>>>>>> parent of db4ecb9 (ajustes en el dinamismo de la pag(main))
