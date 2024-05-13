@@ -92,14 +92,15 @@ const mapGrap = [
 
 const mapGraph = [
     ['A', 'ABE', 2.5], ['ABE', 'B', 2.5], ['ABE', 'E', 3.5],
-    ['B', 'C', 3], ['C', 'D', 2], ['D', 'DHI', 3], 
-    ['D', 'G', 4], ['DHI', 'H', 3], ['DHI', 'I', 1.5], 
-    ['DHI', 'IJ1', 1.5], ['F', 'E', 2], ['G', 'F', 1],
-    ['IJ1', 'IJ2', 2], ['IJ2', 'J', 2.5]
+    ['BD','B', 1.5], ['BDC','BD',1.5] , ['C','BDC',1],
+    ['D','BDC',2], ['D', 'DJI', 3], ['DJI','HI',1],
+    ['D', 'G', 4], ['DJI', 'IJ', 3], ['HI', 'I', 1.5], 
+    ['IJ', 'J', 1.5], ['F', 'E', 2], ['G', 'F', 1],
+    ['HI', 'H', 2.5]
 ];
 
-/*var path_test = dijkstra(mapGraph,"A","I");
-console.log(path_test["path"]);    */
+var path_test = dijkstra(mapGraph,"A","I");
+console.log(path_test["path"]);    
 
 /*const coordinates = {
     "A": { "x": 21, "y": 35},
@@ -137,7 +138,7 @@ const path_coordinates = {
 const names = {
     'A': 'Entrada',
     'B': 'Escalera Caldas',
-    'C': 'Baños Carrasquilla',
+    'C': 'Baños Claustro',
     'D': 'Entrada Teatrino',
     'E': 'Síndico',
     'F': 'Aula Mutis',
@@ -199,7 +200,20 @@ function visualization(start,end){
      });
 }
 
-//visualization("A","I");
+visualization("A","I");
 
 //actualización marcadores mapa
-var marker = L.marker([10 ,-9]).addTo(map);
+/*for(let key of Object.keys(path_coordinates)){
+    
+    var marker = L.marker([path_coordinates[key][1],[path_coordinates[key][0]]]).addTo(map);
+    // Bind tooltip to marker
+    marker.bindTooltip(key);
+
+    // Define tooltip behavior on hover
+    marker.on('mouseover', function (e) {
+        this.openTooltip();
+    });
+    marker.on('mouseout', function (e) {
+        this.closeTooltip();
+    });
+}*/
