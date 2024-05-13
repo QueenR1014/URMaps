@@ -337,7 +337,7 @@ ul.dropdown-menu li a {
     -o-transform-origin: center center;
     transform-origin: center center; }
     .hex-item div::before, .hex-item div::after {
-      background-color: #080808;
+      background-color: #380c0c;
       content: "";
       position: absolute;
       width: 100%;
@@ -484,10 +484,10 @@ transition:0.6s;
 .recttitle {
   font-weight: bold; /* Make the title bold */
   margin-bottom: 10px; /* Add space between title and content */
-  font-size: 2vw; /* Adjust font size based on viewport width */
-  color:#f5f3f3;
   font-family: "Karla", sans-serif;
   font-optical-sizing: auto;
+  font-size: 2vw; /* Adjust font size based on viewport width */
+  color:#f5f3f3;
 }
 
 .rectcontent {
