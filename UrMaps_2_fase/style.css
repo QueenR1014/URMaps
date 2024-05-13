@@ -173,12 +173,12 @@ ul.dropdown-menu li a {
 /* Search and Social */
 
 .search-social {
-  margin-top: 0%; /* Puedes ajustar esto según sea necesario */
-  width: 15%;
-  height: 10%;
-  position: fixed; /* Cambiado de relative a absolute */
-  right: 16vh; /* Ajusta la posición derecha según sea necesario */
-  top: 10vh; /* Ajusta la posición superior según sea necesario */
+  margin-top: 0; /* Puedes ajustar esto según sea necesario */
+  width: 15%; /* Ancho del 15% de la ventana gráfica */
+  height: auto; /* Altura automática para que se ajuste al contenido */
+  position: fixed; /* Mantener fijo en la ventana */
+  right: 5%; /* Ajusta la posición derecha según sea necesario */
+  top: 6%; /* Ajusta la posición superior según sea necesario */
   transform: translateY(-50%); /* Centra verticalmente el elemento */
 }
 
@@ -193,8 +193,12 @@ ul.dropdown-menu li a {
 
 .social-icons .btn {
   margin: 0.5px; /* Set margin */
-  background-color: transparent; /* Set background color to transparent */
+  background-color: transparent; /* Set background color */
   border: none; /* Remove border */
+  width: 40px; /* Mismo ancho que la imagen */
+  height: 40px; /* Mismo alto que la imagen */
+  display: inline-block; /* Display inline block */
+
 }
 
 .social-icons .btn img {
