@@ -135,18 +135,11 @@ const path_coordinates = {
     "DJI": [-9, 10]
 };
 
-const names = {
-    'A': 'Entrada',
-    'B': 'Escalera Caldas',
-    'C': 'Baños Claustro',
-    'D': 'Entrada Teatrino',
-    'E': 'Síndico',
-    'F': 'Aula Mutis',
-    'G': 'La Bordadita',
-    'H': 'Cuenteros',
-    'I': 'Escaleras Casur',
-    'J': 'Comedor'
-}  
+const names = [ ['A', 'Entrada'], ['B', 'Escalera Caldas'], 
+                ['C', 'Baños Claustro'], ['D', 'Entrada Teatrino'], 
+                ['E', 'Síndico'], ['F', 'Aula Mutis'], 
+                ['G','La Bordadita'], ['H','Cuenteros'], 
+                ['I', 'Escaleras Casur'], ['J','Comedor']];
 
 
 // Map visualization

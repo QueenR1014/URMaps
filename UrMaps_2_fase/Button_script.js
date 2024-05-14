@@ -1,6 +1,6 @@
 // Diccionario de los id´s de cada lugar 
 const id_s = [
-    ['m2', 'Entrada'], ['m3', 'Escalera Caldas'], ['m4', 'Baños Carrasquilla'],
+    ['m2', 'Entrada'], ['m3', 'Escalera Caldas'], ['m4', 'Baños Claustro'],
     ['m5', 'Entrada Teatrino'], ['m6', 'Síndico'], ['m7', 'Aula Mutis'],
     ['m8', 'La Bordadita'], ['m9', 'Cuenteros'], ['m10', 'Escaleras Casur'],
     ['m11', 'Comedor']
