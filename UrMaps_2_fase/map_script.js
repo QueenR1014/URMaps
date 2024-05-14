@@ -178,7 +178,7 @@ function visualization(start, end) {
     }
     
     // Crear la polilínea con el color correspondiente al estado del switch
-    polyline = L.polyline(polyline_coord, { color: (switchChecked ? "#326585" : "#ba0620"), weight: 5 }).addTo(map);
+    polyline = L.polyline(polyline_coord, { color: (switchChecked ? "#00A3FF" : "#ba0620"), weight: 5 }).addTo(map);
     
     polyline.bindTooltip(names[end]);
 
@@ -212,7 +212,7 @@ document.getElementById('switch-color').addEventListener('change', function() {
 
     // Cambiar el color de la polilínea
     if (polyline) {
-        var newColor = (switchChecked) ? "#326585" : "#ba0620";
+        var newColor = (switchChecked) ? "#00A3FF" : "#ba0620";
         polyline.setStyle({ color: newColor });
     }
 });

@@ -607,7 +607,7 @@ transition:0.6s;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-image: linear-gradient(to right,  #b11d1d, #080808);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -643,7 +643,7 @@ input + .icon::before {
   padding-top: 5px;
 }
 .slider.w-color:before {
-  background-color: #a37eba;
+  background-color: #080808;
 }
 .slider.w-color {
   background-color: #ccc;
@@ -654,17 +654,25 @@ input:checked + .slider.w-color {
   background-color: #ccc;
 }
 input:checked + .slider.icon {
-  background-color: #a37eba;
+  background-image: linear-gradient(to right, #0072b2, #c9daff); /*color segundo estado*/
 }
 
 .slider.icon:before {
-  background-color: #ffe05d;
+  background-color: #080808
 }
 .slider.icon:after {
   background-color: #e2df23;
 }
 input:checked + .slider {
-  background-color: #2196f3;
+  background-color: #dee7ff;
+}
+
+input:checked + .slider.icon:before {
+  background-color: #c9daff; /* Cambio de color del ícono cuando está marcado */
+}
+
+input:checked + .slider.icon:after {
+  background-color: #080808; /* Cambio de color del ícono cuando está marcado */
 }
 
 input:checked + .slider:before {
