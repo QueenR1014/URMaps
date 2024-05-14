@@ -171,7 +171,7 @@ map.setMaxBounds(imageBounds);
 
 let polyline = null;
 function visualization(start,end){
-    //var marker = L.marker([-22,19]).addTo(map);
+    //var marker = L.marker([path_coordinates[start][1],path_coordinates[start][0]]).addTo(map);
     
     var path = dijkstra(mapGraph,start,end)["path"];
     var polyline_coord = [];
@@ -206,6 +206,29 @@ function visualization(start,end){
      polyline.on('mouseout', function (e) {
          this.closeTooltip();
      });
+
+
+    /* var length = polyline.getLatLngs().length;
+     var index = 0;
+     var interval = setInterval(function() {
+       polyline.setStyle({opacity: index / length});
+       index++;
+       if (index > length) {
+         clearInterval(interval);
+       }
+     }, 200); */ // Adjust the duration of the animation by changing the interval
+
+     var length = polyline_coord.length;
+     var index = 0;
+     var interval = setInterval(function() {
+       var segment = polyline_coord.slice(0, index + 1);
+       polyline.setLatLngs(segment);
+       polyline.setStyle({opacity: (index + 1) / length});
+       index++;
+       if (index >= length) {
+         clearInterval(interval);
+       }
+     }, 250);
 
      map.fitBounds(polyline.getBounds());
 }
