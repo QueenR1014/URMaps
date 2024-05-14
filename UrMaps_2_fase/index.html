@@ -6,7 +6,7 @@
 <html lang="ES">
 
 <head>
-    <script src="idioma.js"></script>
+
     <link rel="icon" type="image" href="icons/urmaps_ico_grande.ico">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -47,10 +47,11 @@
     <header class="header-gris">
         <nav class="Nav-titulo">
             <div class="container-fluid">
-                <img src="logos/LOGO_HORIZONTAL_UR_BLANCO.png" alt="Logo" width="200px" height="90px" class="imgU">
+                <img id="mainLogo" src="logos/LOGO_HORIZONTAL_UR_BLANCO.png" alt="Logo" width="200px" height="90px"
+                    class="imgU">
                 <div>
                     <a class="navbar-brand" href="index.html">
-                        <img src="logos/URMAPSHORI.png" alt="logourmaps" height="90px" class="URLOGO">
+                        <img id="urmapsLogo" src="logos/URMAPSHORI.png" alt="logourmaps" height="90px" class="URLOGO">
                     </a>
                 </div>
             </div>
@@ -60,7 +61,8 @@
         <!-- Sección de cambio de idioma -->
         <section>
             <div class="dropdown-center">
-                <button id="languageButton" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <button id="languageButton" class="btn btn-secondary dropdown-toggle" type="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
                     ES
                 </button>
                 <ul class="dropdown-menu">
@@ -70,11 +72,11 @@
                 </ul>
             </div>
         </section>
-        
+
         <script>
-            document.addEventListener('DOMContentLoaded', function() {
+            document.addEventListener('DOMContentLoaded', function () {
                 let traducciones = [];
-                
+
                 // Cargar el archivo JSON
                 fetch('traducciones.json')
                     .then(response => response.json())
@@ -82,14 +84,14 @@
                         traducciones = data;
                         cambiarIdioma('es'); // Idioma por defecto
                     });
-        
+
                 function cambiarIdioma(idioma) {
                     const idiomaMap = {
                         'es': 'Español',
                         'en': 'Inglés',
                         'fr': 'Francés'
                     };
-        
+
                     // Actualizar el texto de los elementos traducidos
                     traducciones.forEach(item => {
                         const element = document.getElementById(item.Clave);
@@ -97,12 +99,12 @@
                             element.textContent = item[idiomaMap[idioma]];
                         }
                     });
-        
+
                     // Actualizar el texto del botón
                     const languageButton = document.getElementById('languageButton');
                     languageButton.textContent = idioma.toUpperCase();
                 }
-        
+
                 // Manejar el clic en los elementos del menú desplegable
                 document.querySelectorAll('.dropdown-item').forEach(item => {
                     item.addEventListener('click', event => {
@@ -113,33 +115,17 @@
                 });
             });
         </script>
-        
+
         <!-- fin traduccion -->
 
-        <section class="search-social">
-            <!-- Barra de búsqueda -->
-            <!-- Botones de redes sociales -->
-            <div class="social-icons">
-                <button class="btn btn-primary rounded-circle" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-                    <img src="buttons/facebook.png" alt="Facebook"></button>
-                <button class="btn btn-primary rounded-circle"><img src="buttons/twitter.png" alt="Twitter"></button>
-                <button class="btn btn-primary rounded-circle"><img src="buttons/instagram.png"
-                        alt="Instagram"></button>
-            </div>
-        </section>
-
+        <!--cambio color-->
+        <button id="boton-change">d</button>
 
     </header>
     <!-- Contenido principal -->
     <main>
-        <div class="gradiante">
+        <div class="gradiante" id="gradiante">
 
-
-
-            <!-- Sección de búsqueda y redes sociales -->
-
-
-            <!-- Menú lateral -->
 
             <!-- Mapa -->
             <section>
@@ -379,6 +365,31 @@
                         </a>
                     </div>
                 </li>
+                <li>
+                    <div class="hexagon-item">
+                        <div class="hex-item">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="hex-item">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <a href="#" class="hex-content" id="m10">
+                            <span class="hex-content-inner">
+                                <span class="title" id="Comedor"><b>La bordadita</b></span>
+                            </span>
+                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z"
+                                    fill="#1e2530"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </li>
 
                 <!-- Repite lo mismo para los demás botones hexagonales -->
                 <!-- No olvides cambiar los ID de los botones según sea necesario -->
@@ -397,8 +408,9 @@
         <!-- Rectángulo con la info momento -->
 
         <div class="rectangle">
-            <div class="recttitle" id="ComedorT" >Comedor</div>
-            <div class="rectcontent" id="desc_Comedor">Juntando zonas de bienestar, estudio y esparcimiento, contrasta su estilo como
+            <div class="recttitle" id="ComedorT">Comedor</div>
+            <div class="rectcontent" id="desc_Comedor">Juntando zonas de bienestar, estudio y esparcimiento, contrasta
+                su estilo como
                 parte del Claustro Republicano con la corriente moderna de la universidad.
             </div>
         </div>

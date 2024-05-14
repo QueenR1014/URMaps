@@ -7,12 +7,16 @@ aside{
 
 .gradiante {
   background-image: linear-gradient(to top, #801e1e 2%, #080808);
-  height: 100%; /* Establece la altura al 50% del viewport height */
-  width: 100%; /* Establece el ancho al 80% del viewport width */
-  position:fixed;
+  height: 100%;
+  width: 100%;
+  position: fixed;
   z-index: 0;
   left: 0;
   top: 130px;
+}
+
+.gradiante.alt-colors {
+  background-image: linear-gradient(to top, #0072b2 2%, #080808);
 }
 
 /* Path */
@@ -104,12 +108,16 @@ ul.dropdown-menu li a {
   padding: 10px 0; /* Set padding */
   margin-top: 35px; /* Add top margin */
   position: relative; /* Position relative */
-  background-color: #ba0620; /* Set background color */
+  background-color: #883844; /* Set background color */
   z-index: 100;
 }
 
-.btn-secondary:hover {
+.btn-secondary:hover {  
   background-color: #5c1919;
+}
+
+.btn-secondary.alt-colors:hover {
+  background-color: #0072b2;
 }
 
 .Button .btn {
@@ -162,6 +170,12 @@ ul.dropdown-menu li a {
   color: #f2f2f2; /* Set text color */
 }
 
+.Button_config.alt-colors {
+  background-color: #0072b2; /* Set background color */
+  border-color: #0072b2; /* Set border color */
+  color: #f2f2f2; /* Set text color */
+}
+
 /* Content Styles */
 
 /* Content Wrapper */
@@ -170,44 +184,6 @@ ul.dropdown-menu li a {
   flex-direction: row; /* Arrange children in a column */
 }
 
-/* Search and Social */
-
-.search-social {
-  margin-top: 0; /* Puedes ajustar esto según sea necesario */
-  width: 15%; /* Ancho del 15% de la ventana gráfica */
-  height: auto; /* Altura automática para que se ajuste al contenido */
-  position: fixed; /* Mantener fijo en la ventana */
-  right: 5%; /* Ajusta la posición derecha según sea necesario */
-  top: 6%; /* Ajusta la posición superior según sea necesario */
-  transform: translateY(-50%); /* Centra verticalmente el elemento */
-}
-
-.search-social input {
-  width: auto; /* Set width to auto */
-  margin-right: 10px; /* Add right margin */
-}
-
-.social-icons {
-  display: inline-block; /* Display inline block */
-}
-
-.social-icons .btn {
-  margin: 0.5px; /* Set margin */
-  background-color: transparent; /* Set background color */
-  border: none; /* Remove border */
-  width: 40px; /* Mismo ancho que la imagen */
-  height: 40px; /* Mismo alto que la imagen */
-  display: inline-block; /* Display inline block */
-
-}
-
-.social-icons .btn img {
-  width: 40px; /* Set width */
-  height: 40px; /* Set height */
-  border-radius: 50%; /* Make it round */
-  background-color: #ffffff; /* Set background color */
-  padding: 8px; /* Set padding */
-}
 
 /* Map Styles*/
 #map {
@@ -295,7 +271,10 @@ ul.dropdown-menu li a {
         height: 5px; }
     .hexagon-item:hover .hex-item div::before,
     .hexagon-item:hover .hex-item div::after {
-      background-color: #c73b3b; }
+      background-color: #972525; }
+    .hexagon-item.alt-colors:hover .hex-item div::before,
+    .hexagon-item.alt-colors:hover .hex-item div::after {
+      background-color: #0072b2; }
     .hexagon-item:hover .hex-content svg {
       -webkit-transform: scale(0.97);
       -moz-transform: scale(0.97);
@@ -336,7 +315,8 @@ ul.dropdown-menu li a {
     -ms-transform-origin: center center;
     -o-transform-origin: center center;
     transform-origin: center center; }
-    .hex-item div::before, .hex-item div::after {
+    .hex-item div::before, 
+    .hex-item div::after {
       background-color: #380c0c;
       content: "";
       position: absolute;
@@ -345,7 +325,12 @@ ul.dropdown-menu li a {
       -webkit-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
       -moz-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
       -o-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
-      transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) 0s; }
+      transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) 0s; 
+    }
+    .hex-item div.alt-colors::before, 
+    .hex-item div.alt-colors::after {
+      background-color: #003f64;
+    }
     .hex-item div:before {
       top: 0; }
     .hex-item div:after {
@@ -417,9 +402,6 @@ width: 156px; }
   }
 .hex-content:hover {
   color: #fff; }
-
-
-
 
 /*Difumnado de las letras en hover*/
 
@@ -598,4 +580,16 @@ transition:0.6s;
 
 @media screen and (max-aspect-ratio: 16/9){
 
+}
+
+
+#boton-change {
+  position: absolute;
+  top: 40px;
+  right: 150px;
+  background-color: #000000;
+  width: 70px;
+  height: 50px;
+  font-size: 25px;
+  color: white;
 }

@@ -188,6 +188,14 @@ function visualization(start,end){
     polyline = L.polyline(polyline_coord,{color:"#ba0620",weight:5}).addTo(map);
     //polyline.remove();
 
+    //daltonismo
+    document.getElementById('boton-change').addEventListener('click', function() {
+        // Cambiar el color de la polilínea
+        var currentColor = polyline.options.color;
+        var newColor = (currentColor === "#ba0620") ? "#326585" : "#ba0620";
+        polyline.setStyle({ color: newColor });
+    });
+
      // Add a label (tooltip) to the polyline
      polyline.bindTooltip(names[end]);
     console.log(names[end]);
