@@ -163,70 +163,64 @@ map.setMaxBounds(imageBounds);
 // Add a marker to the map
 
 let polyline = null;
-function visualization(start,end){
-    //var marker = L.marker([path_coordinates[start][1],path_coordinates[start][0]]).addTo(map);
-    
-    var path = dijkstra(mapGraph,start,end)["path"];
-    var polyline_coord = [];
-    //console.log(path);
-    for(let i = 0; i < path.length; i++){
-        //console.log(path_coordinates[path[i]]);
-        polyline_coord.push([path_coordinates[path[i]][1],path_coordinates[path[i]][0]]);
-    }
-    console.log(polyline_coord);
+let switchChecked = false; // Estado inicial del switch
 
-    if(polyline){
+function visualization(start, end) {
+    var path = dijkstra(mapGraph, start, end)["path"];
+    var polyline_coord = [];
+    
+    for (let i = 0; i < path.length; i++) {
+        polyline_coord.push([path_coordinates[path[i]][1], path_coordinates[path[i]][0]]);
+    }
+
+    if (polyline) {
         map.removeLayer(polyline);
     }
-    polyline = L.polyline(polyline_coord,{color:"#ba0620",weight:5}).addTo(map);
-    //polyline.remove();
+    
+    // Crear la polilínea con el color correspondiente al estado del switch
+    polyline = L.polyline(polyline_coord, { color: (switchChecked ? "#326585" : "#ba0620"), weight: 5 }).addTo(map);
+    
+    polyline.bindTooltip(names[end]);
 
-    //daltonismo
-    document.getElementById('boton-change').addEventListener('click', function() {
-        // Cambiar el color de la polilínea
-        var currentColor = polyline.options.color;
-        var newColor = (currentColor === "#ba0620") ? "#326585" : "#ba0620";
-        polyline.setStyle({ color: newColor });
+    polyline.on('mouseover', function(e) {
+        this.openTooltip();
     });
 
-     // Add a label (tooltip) to the polyline
-     polyline.bindTooltip(names[end]);
-    console.log(names[end]);
-     // Define tooltip behavior on hover
-     polyline.on('mouseover', function (e) {
-         this.openTooltip();
-     });
-     polyline.on('mouseout', function (e) {
-         this.closeTooltip();
-     });
+    polyline.on('mouseout', function(e) {
+        this.closeTooltip();
+    });
 
+    var length = polyline_coord.length;
+    var index = 0;
+    var interval = setInterval(function() {
+        var segment = polyline_coord.slice(0, index + 1);
+        polyline.setLatLngs(segment);
+        polyline.setStyle({ opacity: (index + 1) / length });
+        index++;
+        if (index >= length) {
+            clearInterval(interval);
+        }
+    }, 250);
 
-    /* var length = polyline.getLatLngs().length;
-     var index = 0;
-     var interval = setInterval(function() {
-       polyline.setStyle({opacity: index / length});
-       index++;
-       if (index > length) {
-         clearInterval(interval);
-       }
-     }, 200); */ // Adjust the duration of the animation by changing the interval
-
-     var length = polyline_coord.length;
-     var index = 0;
-     var interval = setInterval(function() {
-       var segment = polyline_coord.slice(0, index + 1);
-       polyline.setLatLngs(segment);
-       polyline.setStyle({opacity: (index + 1) / length});
-       index++;
-       if (index >= length) {
-         clearInterval(interval);
-       }
-     }, 250);
-
-     map.fitBounds(polyline.getBounds());
+    map.fitBounds(polyline.getBounds());
 }
 
+// Agregar evento de cambio para el switch
+document.getElementById('switch-color').addEventListener('change', function() {
+    // Actualizar el estado del switch
+    switchChecked = this.checked;
+
+    // Cambiar el color de la polilínea
+    if (polyline) {
+        var newColor = (switchChecked) ? "#326585" : "#ba0620";
+        polyline.setStyle({ color: newColor });
+    }
+});
+
 visualization("A","I");
+
+
+
 
 //actualización marcadores mapa
 //var marker = L.marker([0,0]).addTo(map);

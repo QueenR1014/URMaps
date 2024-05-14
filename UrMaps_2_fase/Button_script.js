@@ -39,6 +39,8 @@ function manejarClic(id) {
     }
 }
 
+
+
 // Bucle que nos va ayduar que se pueda ejecutar el evento correspondiente al guiado del mapa
 for (let i = 2; i <= 11; i++) {
     const buttonId = 'm' + i;

@@ -14,35 +14,34 @@ $('#pathList').on('mousedown', function(event) {
 
 
 //cambio color
-document.getElementById('boton-change').addEventListener('click', function() {
+document.getElementById('switch-color').addEventListener('change', function() {
     document.querySelector('.gradiante').classList.toggle('alt-colors');
 });
 
-document.getElementById('boton-change').addEventListener('click', function() {
+document.getElementById('switch-color').addEventListener('change', function() {
     document.querySelector('.btn-secondary').classList.toggle('alt-colors');
 });
 
-document.getElementById('boton-change').addEventListener('click', function() {
+document.getElementById('switch-color').addEventListener('change', function() {
     document.querySelectorAll('.hexagon-item').forEach(item => {
         item.classList.toggle('alt-colors');
     });
 });
 
-document.getElementById('boton-change').addEventListener('click', function() {
+document.getElementById('switch-color').addEventListener('change', function() {
     document.querySelectorAll('.hex-item').forEach(item => {
         item.classList.toggle('alt-colors');
     });
 });
 
-document.getElementById('boton-change').addEventListener('click', function() {
+document.getElementById('switch-color').addEventListener('change', function() {
     document.querySelectorAll('.Button_config').forEach(item => {
         item.classList.toggle('alt-colors');
     });
 });
 
-document.getElementById('boton-change').addEventListener('click', function() {
+document.getElementById('switch-color').addEventListener('change', function() {
     var urmapsLogo = document.getElementById('urmapsLogo');
-    
     // Cambiar el src de las imágenes
     if (urmapsLogo.src.includes('URMAPSHORI.png')) {
         urmapsLogo.src = 'logos/URMAPSHORI_ALTERNATIVO.png';
