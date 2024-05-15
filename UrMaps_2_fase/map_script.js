@@ -217,10 +217,6 @@ document.getElementById('switch-color').addEventListener('change', function() {
     }
 });
 
-visualization("A","I");
-
-
-
 
 //actualización marcadores mapa
 //var marker = L.marker([0,0]).addTo(map);
