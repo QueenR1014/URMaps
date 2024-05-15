@@ -7,7 +7,16 @@ const id_s = [
 ];
 
 let imagesById = [
-    ["m11", "patoimg/patopa.jpg", "patoimg/patochiquito.jpg", "patoimg/Pato3.jpeg"],
+    ["m2", "Imagenes/Entrada/Entrada_1.jpeg", "Imagenes/Entrada/Entrada_2.jpeg"],
+    ["m3", "Imagenes/Escalera_Caldas/Caldas_1.jpeg", "Imagenes/Escalera_Caldas/Caldas_2.jpeg", "Imagenes/Escalera_Caldas/Caldas_3.jpeg"],
+    ["m4", "Imagenes/Baños_Claustro/Claustro_1.jpeg", "Imagenes/Baños_Claustro/Claustro_2.jpeg", "Imagenes/Baños_Claustro/Claustro_3.jpeg"],
+    ["m5", "Imagenes/Entrada_Teatrino/Teatrino_1.jpeg", "Imagenes/Entrada_Teatrino/Teatrino_2.jpeg", "Imagenes/Entrada_Teatrino/Teatrino_3.jpeg"],
+    ["m6", "Imagenes/Sindico/Sindico_1.jpeg", "Imagenes/Sindico/Sindico_2.jpeg", "Imagenes/Sindico/Sindico_3.jpeg"],
+    ["m7", "Imagenes/Aula_Mutis/Aula_M_1.jpeg", "Imagenes/Aula_Mutis/Aula_M_2.jpeg", "Imagenes/Aula_Mutis/Aula_M_3.jpeg"],
+    ["m8", "Imagenes/La_Bordadita/Bordadita_1.jpeg", "Imagenes/La_Bordadita/Bordadita_2.jpeg"],
+    ["m9", "Imagenes/Cuenteros/Cuenteros_1.jpeg", "Imagenes/Cuenteros/Cuenteros_2.jpeg"],
+    ["m10", "Imagenes/Escaleras_Casur/Casur_1.jpeg", "Imagenes/Escaleras_Casur/Casur_2.jpeg"],
+    ["m11", "Imagenes/Comedor/Comedor_1.jpeg", "Imagenes/Comedor/Comedor_2.jpeg", "Imagenes/Comedor/Comedor_3.jpeg"],
 ];
 
 // Asignar la letra correspondiente de 'Entrada' a una varibale que nos indica el inicio del recorrido 
