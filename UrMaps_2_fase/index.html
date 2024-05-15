@@ -308,7 +308,7 @@
                         </div>
                         <a href="#" class="hex-content" id="m8">
                             <span class="hex-content-inner">
-                                <span class="title" id="PlazaCuenteros"><b>La Bordadita</b></span>
+                                <span class="title" id="LaBordadita"><b>La Bordadita</b></span>
                             </span>
                             <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -334,7 +334,7 @@
                         <a href="#" class="hex-content" id="m9">
                             <span class="hex-content-inner">
 
-                                <span class="title" id="EscalerasCASUR"><b>Cuenteros</b></span>
+                                <span class="title" id="PlazaCuenteros"><b>Cuenteros</b></span>
                             </span>
                             <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -359,7 +359,7 @@
                         </div>
                         <a href="#" class="hex-content" id="m10">
                             <span class="hex-content-inner">
-                                <span class="title" id="Comedor"><b>Escaleras Casur</b></span>
+                                <span class="title" id="EscalerasCASUR"><b>Escaleras Casur</b></span>
                             </span>
                             <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -384,7 +384,7 @@
                         </div>
                         <a href="#" class="hex-content" id="m11">
                             <span class="hex-content-inner">
-                                <span class="title" id="Comedor"><b>Comedor</b></span>
+                                <span class="title" id="Comedor" onclick="mostrarCarrusel('m11')"><b>Comedor</b></span>
                             </span>
                             <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -420,44 +420,18 @@
             </div>
         </div>
 
-        <!-- Slides de patos -->
-        <div class="slide-slider">
+        <div class="carrusel-container">
             <div class="slide-list">
-                <div class="slide-item">
-                    <img src="patoimg/Pato1.jpg" alt="">
-                </div>
-                <div class="slide-item">
-                    <img src="patoimg/Pato2.jpg" alt="">
-                </div>
-                <div class="slide-item">
-                    <img src="patoimg/patochiquito.jpg" alt="">
-                </div>
-                <div class="slide-item">
-                    <img src="patoimg/patopa.jpg" alt="">
-                </div>
-                <div class="slide-item">
-                    <img src="patoimg/Pato3.jpeg" alt="">
-                </div>
+                <!-- Imágenes se agregarán aquí dinámicamente -->
             </div>
-            <div class="slide-buttons">
-                <button id="prev"><- </button>
-                        <button id="next">-></button>
-            </div>
-            <ul class="slide-dots">
-                <li class="active"></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
+            <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+            <a class="next" onclick="moveSlide(1)">&#10095;</a>
         </div>
-
-        <script src="patopato.js"></script>
-
-
 
 
     </main>
+
+    
 
 </body>
 
