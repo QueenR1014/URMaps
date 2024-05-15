@@ -14,10 +14,17 @@ prev.onclick = function(){
     active = active - 1 >= 0 ? active - 1 : lengthItems;
     reloadSlider();
 }
+
 let refreshInterval = setInterval(()=> {next.click()}, 3000);
 function reloadSlider(){
     slider.style.left = -items[active].offsetLeft + 'px';
-    // 
+    // Update image sources
+    let images = items[active].querySelectorAll('img');
+    images.forEach((img, index) => {
+        img.src = getSrcById(index); // Revisar button_script.js
+    });
+
+
     let last_active_dot = document.querySelector('.slide-slider .slide-dots li.active');
     last_active_dot.classList.remove('active');
     dots[active].classList.add('active');
