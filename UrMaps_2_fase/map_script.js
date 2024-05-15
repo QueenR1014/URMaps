@@ -77,6 +77,19 @@ function dijkstra(graph, start, end) {
     return null; // Path not found
 }
 
+/*
+const mapGrap = [
+    ['A', 'ABE', 2.5], ['ABE', 'B', 2.5], ['ABE', 'E', 3.5],
+    ['D', 'DHI', 3], ['DHI', 'H', 3], ['DHI', 'I', 1.5], ['DHI', 'IJ1', 1.5],
+    ['IJ1', 'IJ2', 2],
+    ['IJ2', 'J', 2.5],
+    ['B', 'C', 3],
+    ['C', 'D', 2],
+    ['D', 'G', 4],
+    ['G', 'F', 1],
+    ['F', 'E', 2]
+];*/
+
 const mapGraph = [
     ['A', 'ABE', 2.5], ['ABE', 'B', 2.5], ['ABE', 'E', 3.5],
     ['BD','B', 1.5], ['BDC','BD',1.5] , ['C','BDC',1],
@@ -88,6 +101,20 @@ const mapGraph = [
 
 /*var path_test = dijkstra(mapGraph,"A","I");
 console.log(path_test["path"]);    */
+
+/*const coordinates = {
+    "A": { "x": 21, "y": 35},
+    "B": {"x": 9,"y": 32},
+    "C": {"x": 9,"y": 19},
+    "D": {"x": 9,"y": 9},
+    "E": {"x": 31,"y": 32},
+    "F": {"x": 31,"y": 21},
+    "G": {"x": 31,"y": 9},
+    "H": {"x": 9,"y": -13},
+    "I": {"x": 6,"y": -10},
+    "J": {"x": 24,"y": -22}
+}*/
+
 
 const path_coordinates = {
     "A": [-20, -34], //checked

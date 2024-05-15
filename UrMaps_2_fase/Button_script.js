@@ -1,40 +1,41 @@
-// Diccionario de los id´s de cada lugar, se relacionan por los nodos del grafo
-const id_s = {
-    "m2": "A",
-    "m3": "B",
-    "m4": "C",
-    "m5": "D",
-    "m6": "E",
-    "m7": "F",
-    "m8": "G",
-    "m9": "H",
-    "m10": "I",
-    "m11": "J"
-}
+// Diccionario de los id´s de cada lugar 
+const id_s = [
+    ['m2', 'Entrada'], ['m3', 'Escalera Caldas'], ['m4', 'Baños Claustro'],
+    ['m5', 'Entrada Teatrino'], ['m6', 'Síndico'], ['m7', 'Aula Mutis'],
+    ['m8', 'La Bordadita'], ['m9', 'Cuenteros'], ['m10', 'Escaleras Casur'],
+    ['m11', 'Comedor']
+];
 
-//Juanes si ves esto, copia las fuentes que ya están en el directorio de archivos
-const imageSources ={
-    "m2": "A",
-    "m3": ["Escalera_Caldas/"],
-    "m4": "C",
-    "m5": "D",
-    "m6": "E",
-    "m7": "F",
-    "m8": "G",
-    "m9": "H",
-    "m10": "I",
-    "m11": "J"
-}
 // Asignar la letra correspondiente de 'Entrada' a una varibale que nos indica el inicio del recorrido 
 let start = 'A'
 
+// Función que nos va ayudar a extraer el valor de la letra (A - J) de los destinos
+function getLetterFromName(name) {
+    for (let i = 0; i < names.length; i++) {
+        if (names[i][1] === name) {
+            return names[i][0];
+        }
+    }
+    return null; 
+}
+
+// Función que nos va ayudar a extraer el nombre asociado a los id´s registrados (m2 - m11) de los destinos
+function getNombreDelBoton(id) {
+    for (let i = 0; i < id_s.length; i++) {
+        if (id_s[i][0] === id) {
+            return id_s[i][1];
+        }
+    }
+    return null; 
+}
+
 // Función que nos permitira que se guarde el camino más optimo desde el punto 'A' al destino seleccionado
 function manejarClic(id) {
-    const end = id_s[id];
+    const end = getNombreDelBoton(id);
     if (end) {
-        visualization(start, end);
+        visualization(start, getLetterFromName(end));
     } else {
-        console.error("No fue posible cargar el camino. Nodo final no especificado o nulo.", id);
+        console.error(" ", id);
     }
 }
 
@@ -49,12 +50,3 @@ for (let i = 2; i <= 11; i++) {
 }
 
 
-//función de reemplazo de fuente de imagen
-function getSrcById(index) {
-    // Check if the index exists in the imageSources dictionary
-    if (index in imageSources) {
-        return imageSources[index]; // Return the corresponding source
-    } else {
-        return 'default/path/to/image.jpg'; // Default source if index is not found
-    }
-}
