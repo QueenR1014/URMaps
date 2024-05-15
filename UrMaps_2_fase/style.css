@@ -623,11 +623,15 @@ transition:0.6s;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
+
+/*icono para la parte azul*/
 input:checked + .icon::before {
   font-family: "FontAwesome";
-  content: "\f00c";
+  content: "\f06e";
   transform: rotate(45deg);
-  padding-top: 5px;
+  padding-top: 2px;
+  padding-left: 5px;
+  color:#000000;
 }
 .toggle {
   font-family: "FontAwesome";
@@ -637,10 +641,13 @@ input:checked + .icon::before {
   margin-top: 71px;
   color: #4e4a46;
 }
+/*icono para la parte roja*/
 input + .icon::before {
   font-family: "FontAwesome";
-  content: "\f00d";
-  padding-top: 5px;
+  content: "\f070";
+  padding-top: 1px;
+  padding-left: 7px;
+  color: #ffffff;
 }
 .slider.w-color:before {
   background-color: #080808;
