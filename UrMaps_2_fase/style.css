@@ -487,7 +487,7 @@ transition:0.6s;
   right: 69%; /* Adjust to position it to the left */
   z-index: 90; /* Ensure it's above other content */
   top: 50%; /* Center vertically */
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0);
   max-width: 600px;
   margin: auto;
 }
