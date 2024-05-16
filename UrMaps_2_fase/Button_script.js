@@ -100,6 +100,7 @@ function manejarClic(id) {
     const end = getNombreDelBoton(id);
     if (end) {
         visualization(start, getLetterFromName(end));
+        mostrarCarrusel(id);
     } else {
         console.error(" ", id);
     }
