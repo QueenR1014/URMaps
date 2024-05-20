@@ -19,6 +19,19 @@ let imagesById = [
     ["m11", "Imagenes/Comedor/Comedor_1.jpeg", "Imagenes/Comedor/Comedor_2.jpeg", "Imagenes/Comedor/Comedor_3.jpeg"],
 ];
 
+let desc_edificios = [
+    ["m2", "Ubicada en el edifico que dio origen a la Universidad, el Claustro Colonial. Este monumento nacional construido en 1653 contrasta la arquitectura neogranadina con la innovación."],
+    ["m3", "Adornada con pinturas de la época, las escaleras de Caldas reflejan el legado histórico de un edificio que hace parte de la historia del país."],
+    ["m4", "Siendo unos de los primeros baños para todas las personas en las universidades del país, muestra cómo mezclar arquitectura colonial y contemporánea."],
+    ["m5", "Parte de la expansión republicana de la Universidad (1898) como comedor y remodelado en 2021, conecta el Claustro Colonial con el Claustro Republicano."],
+    ["m6", "En esta esquina están las oficinas de la Sindicatura y Secretaría de la Universidad, junto con el Foyer del Aula Mutis, auditorio insignia."],
+    ["m7", "Este auditorio recientemente remodelado es, junto con el Aula Máxima, el auditorio insignia de la Universidad. Es sede de los principales eventos institucionales."],
+    ["m8", "Es la iglesia de la sede Claustro y monumento nacional. Además, en ella se encuentran los sepulcros de figuras ilustres para la Universidad y el país."],
+    ["m9", "Con su espacio verde y cálido, conecta cuatro edificios importantes: Claustro republicano, Casa Rosarista, CASUR y Edificio Nuevo."],
+    ["m10", "Conecta a CASUR, el edificio con mayor capacidad de la sede, con el resto del complejo del Claustro."],
+    ["m11", "Juntando zonas de bienestar, estudio y esparcimiento, contrasta su estilo como parte del Claustro Republicano con la corriente moderna de la universidad."]
+];
+
 // Asignar la letra correspondiente de 'Entrada' a una varibale que nos indica el inicio del recorrido 
 let start = 'A'
 
@@ -49,6 +62,24 @@ function getImagesById(id) {
         }
     }
     return null;
+}
+
+function getDescById(id) {
+    for (let i = 0; i < desc_edificios.length; i++) {
+        if (desc_edificios[i][0] === id) {
+            return desc_edificios[i][1];
+        }
+    }
+    return null; 
+}
+
+function mostrarDescripcion(id) {
+    const descripcion = getDescById(id);
+    const rectangle = document.querySelector('.descripcion-info');
+
+    if (descripcion !== null) {
+        rectangle.innerHTML = `<h1>${descripcion}</h1>`;
+    }
 }
 
 function mostrarCarrusel(id) {
@@ -101,6 +132,7 @@ function manejarClic(id) {
     if (end) {
         visualization(start, getLetterFromName(end));
         mostrarCarrusel(id);
+        mostrarDescripcion(id);
     } else {
         console.error(" ", id);
     }

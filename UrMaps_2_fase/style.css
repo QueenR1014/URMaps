@@ -448,20 +448,30 @@ transition:0.6s;
 
 /*Rectángulo con información*/
 .rectangle {
-  background-color: rgba(73, 7, 7, 0.0);;
-  border-radius: 10px; /* Adjust the value to change the roundness */
-  padding: 20px; /* Add padding to give space for text */
+  background-color: rgba(73, 7, 7, 0.0);
+  border-radius: 10px; /* Ajusta el valor para cambiar la redondez */
+  padding: 20px; /* Agrega padding para dar espacio al texto */
   width: 25vw;
   height: calc(40vw * 9/16);
-  position: fixed; /* Position it relative to the viewport */
+  position: fixed; /* Posición fija */
   right: 10%;
   z-index: 90;
   top: 45%; /* Centra verticalmente */
-  display: flex; /* Use flexbox */
-  flex-direction: column; /* Arrange children vertically */
-  justify-content: center; /* Center content vertically */
-  align-items: center; /* Center content horizontally */
+  display: flex; /* Usa flexbox */
+  flex-direction: column; /* Alinea los hijos verticalmente */
+  justify-content: center; /* Centra el contenido verticalmente */
+  align-items: center; /* Centra el contenido horizontalmente */
 }
+
+.rectangle .descripcion-info {
+  color: white;
+  font-size: 16px; /* Ajusta el tamaño de la fuente */
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(73, 7, 7, 0.0);
+  width: 25vw;
+}
+
 
 .recttitle {
   font-weight: bold; /* Make the title bold */
