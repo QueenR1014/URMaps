@@ -223,6 +223,15 @@ ul.dropdown-menu li a {
   flex: 0 0 auto; /* Los elementos no se encogerán y se ajustarán a su contenido */
   min-width: 100px; /* O cualquier tamaño mínimo adecuado */
   scroll-snap-align: start; /* Ayuda a que los elementos se alineen correctamente al hacer scroll */
+  height: calc(25vh/2);
+  margin-left: 5vh;
+}
+
+#pathList:active, #pathList:focus {
+  cursor: grab; /* Cambia el cursor a "agarre" cuando se hace clic o se enfoca */
+}
+#pathList:active {
+  cursor: grabbing; /* Cambia el cursor a "agarrando" cuando se está arrastrando */
 }
 
 
