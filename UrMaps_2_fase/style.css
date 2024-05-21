@@ -197,25 +197,32 @@ ul.dropdown-menu li a {
 /* Styles for Path List Buttons */
 
 #pathList {
-    list-style-type: none;
-    height: 30vh; /* Establece la altura al 25% del viewport height */
-    width: 90vw; /* Establece el ancho al 80% del viewport width */
-    padding: 0;
-    margin: 0 auto;
-    position: relative; /* Cambiado a relativo para que el z-index funcione */
-    display: flex;
-    flex-direction: row;
-    background-color: rgba(255, 255, 255, 0);
-    border-radius: 10px;
-    overflow: hidden;
-    z-index: 9999 !important; /* Selecciona un valor alto para asegurarte de que esté encima de todo */
+  list-style-type: none;
+  height: 30vh; /* Establece la altura al 30% del viewport height */
+  width: 90vw; /* Establece el ancho al 90% del viewport width */
+  padding: 0;
+  margin: 0 auto;
+  position: relative; /* Cambiado a relativo para que el z-index funcione */
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 10px;
+  overflow-x: auto; /* Permite el desplazamiento horizontal */
+  overflow-y: hidden; /* Evita el desplazamiento vertical */
+  z-index: 9999 !important; /* Selecciona un valor alto para asegurarte de que esté encima de todo */
+  -webkit-overflow-scrolling: touch; /* Añade inercia de desplazamiento en iOS */
+  scroll-snap-type: x mandatory; /* Facilita el desplazamiento suave en todas las plataformas */
+}
+
+#pathList::-webkit-scrollbar {
+  display: none; /* Oculta la barra de desplazamiento en Webkit */
 }
 
 
-#pathList li {
-    margin-left: 5vw; /* Set margin between hexagons */
-    height: calc(25vh/2);
-    flex:1;
+#pathList > li {
+  flex: 0 0 auto; /* Los elementos no se encogerán y se ajustarán a su contenido */
+  min-width: 100px; /* O cualquier tamaño mínimo adecuado */
+  scroll-snap-align: start; /* Ayuda a que los elementos se alineen correctamente al hacer scroll */
 }
 
 
@@ -461,6 +468,9 @@ transition:0.6s;
   flex-direction: column; /* Alinea los hijos verticalmente */
   justify-content: center; /* Centra el contenido verticalmente */
   align-items: center; /* Centra el contenido horizontalmente */
+  width: 25vw;
+  height: calc(40vw * 9/16);
+  overflow: auto;
 }
 
 .rectangle .descripcion-info {
@@ -470,6 +480,12 @@ transition:0.6s;
   padding: 20px;
   background-color: rgba(73, 7, 7, 0.0);
   width: 25vw;
+  height: calc(40vw * 9/16);
+}
+
+.h1{
+  width: 25vw;
+  height: calc(40vw * 9/16);
 }
 
 
