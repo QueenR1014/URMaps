@@ -223,7 +223,7 @@ ul.dropdown-menu li a {
   flex: 0 0 auto; /* Los elementos no se encogerán y se ajustarán a su contenido */
   min-width: 100px; /* O cualquier tamaño mínimo adecuado */
   scroll-snap-align: start; /* Ayuda a que los elementos se alineen correctamente al hacer scroll */
-  height: calc(25vh/2);
+  height: calc(20vh/2);
   margin-left: 5vh;
 }
 
@@ -467,7 +467,7 @@ transition:0.6s;
   background-color: rgba(73, 7, 7, 0.0);
   border-radius: 10px; /* Ajusta el valor para cambiar la redondez */
   padding: 20px; /* Agrega padding para dar espacio al texto */
-  width: 25vw;
+  width: 30vw;
   height: calc(40vw * 9/16);
   position: fixed; /* Posición fija */
   right: 10%;
@@ -477,41 +477,62 @@ transition:0.6s;
   flex-direction: column; /* Alinea los hijos verticalmente */
   justify-content: center; /* Centra el contenido verticalmente */
   align-items: center; /* Centra el contenido horizontalmente */
-  width: 25vw;
-  height: calc(40vw * 9/16);
   overflow: auto;
 }
 
 .rectangle .descripcion-info {
   color: white;
-  font-size: 16px; /* Ajusta el tamaño de la fuente */
+  font-size: 3px; /* Ajusta el tamaño de la fuente */
   text-align: center;
   padding: 20px;
   background-color: rgba(73, 7, 7, 0.0);
   width: 25vw;
-  height: calc(40vw * 9/16);
+  height: calc(35vw * 9/16);
 }
 
-.h1{
+
+h1 {
+  display: flex; /* Usa flexbox */
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
   width: 25vw;
-  height: calc(40vw * 9/16);
+  height: calc(35vw * 9/16);
+  font-family: "Merriweather", serif;
+  font-size: 3.5vh;
+  text-align: center;
 }
-
 
 .recttitle {
   font-weight: bold; /* Make the title bold */
   margin-bottom: 10px; /* Add space between title and content */
   font-family: "Karla", sans-serif;
   font-optical-sizing: auto;
-  font-size: 2vw; /* Adjust font size based on viewport width */
+  font-size: 1vw; /* Adjust font size based on viewport width */
   color:#f5f3f3;
 }
 
 .rectcontent {
   color: #f5f3f3; /*Color del texto*/
-  font-size: 1.5vw; /* Adjust font size based on viewport width */
+  font-size: 0.5vw; /* Adjust font size based on viewport width */
   font-family: "Merriweather", serif;
   text-align: justify;
+  text-align: center;
+}
+
+/* Estilos para la barra de desplazamiento en navegadores Webkit */
+::-webkit-scrollbar {
+  width: 6px; /* Ancho de la barra de desplazamiento */
+
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent; /* Hace que la pista de la barra de desplazamiento sea transparente */
+
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #f5f2f2; /* Color blanco para la barra de desplazamiento */
+  border-radius: 10px; /* Radio de borde del "thumb" */
 }
 
 .carrusel-container{
