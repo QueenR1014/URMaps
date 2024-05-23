@@ -561,6 +561,7 @@ h1 {
 .slide-item img {
   width: 25vw;
   height: calc(40vw * 9/16); 
+  object-fit: cover;
   display: block;
 }
 
