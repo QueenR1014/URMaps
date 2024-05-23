@@ -199,7 +199,7 @@ ul.dropdown-menu li a {
 
 #pathList {
   list-style-type: none;
-  height: 30vh; /* Establece la altura al 30% del viewport height */
+  height: 35vh; /* Establece la altura al 30% del viewport height */
   width: 90vw; /* Establece el ancho al 90% del viewport width */
   padding: 0;
   margin: 0 auto;
