@@ -225,7 +225,7 @@ ul.dropdown-menu li a {
   flex: 0 0 auto; /* Los elementos no se encogerán y se ajustarán a su contenido */
   min-width: 100px; /* O cualquier tamaño mínimo adecuado */
   scroll-snap-align: start; /* Ayuda a que los elementos se alineen correctamente al hacer scroll */
-  height: calc(20vh/2);
+  height: calc(23vh/2);
   z-index: 9999 !important;
   margin-left: 5vh;
 }
