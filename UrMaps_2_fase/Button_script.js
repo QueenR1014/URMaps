@@ -20,7 +20,7 @@ let imagesById = [
 ];
 
 let desc_edificios = [
-    ["m2", "Holas putas"],
+    ["m2", "<b>Créditos:</b> <br> Camila Camacho <br> Tardes<br> mamasotes"],
     ["m3", "Adornada con pinturas de la época, las escaleras de Caldas reflejan el legado histórico de un edificio que hace parte de la historia del país."],
     ["m4", "Siendo unos de los primeros baños para todas las personas en las universidades del país, muestra cómo mezclar arquitectura colonial y contemporánea."],
     ["m5", "Parte de la expansión republicana de la Universidad (1898) como comedor y remodelado en 2021, conecta el Claustro Colonial con el Claustro Republicano."],
@@ -130,9 +130,9 @@ function updateSlidePosition() {
 function manejarClic(id) {
     const end = getNombreDelBoton(id);
     if (end) {
-        visualization(start, getLetterFromName(end));
         mostrarCarrusel(id);
         mostrarDescripcion(id);
+        visualization(start, getLetterFromName(end));
     } else {
         console.error(" ", id);
     }
