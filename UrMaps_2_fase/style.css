@@ -211,9 +211,9 @@ ul.dropdown-menu li a {
   border-radius: 10px;
   overflow-x: auto; /* Permite el desplazamiento horizontal */
   overflow-y: hidden; /* Evita el desplazamiento vertical */
-  z-index: 9999 !important; /* Selecciona un valor alto para asegurarte de que esté encima de todo */
+  z-index: 99 !important; /* Selecciona un valor alto para asegurarte de que esté encima de todo */
   -webkit-overflow-scrolling: touch; /* Añade inercia de desplazamiento en iOS */
-  scroll-snap-type: x mandatory; /* Facilita el desplazamiento suave en todas las plataformas */
+  scroll-snap-type: y mandatory; /* Facilita el desplazamiento suave en todas las plataformas */
 }
 
 #pathList::-webkit-scrollbar {
@@ -226,13 +226,10 @@ ul.dropdown-menu li a {
   min-width: 100px; /* O cualquier tamaño mínimo adecuado */
   scroll-snap-align: start; /* Ayuda a que los elementos se alineen correctamente al hacer scroll */
   height: calc(23vh/2);
-  z-index: 9999 !important;
+  z-index: 99 !important;
   margin-left: 5vh;
 }
 
-#pathList:active, #pathList:focus {
-  cursor: grab; /* Cambia el cursor a "agarre" cuando se hace clic o se enfoca */
-}
 #pathList:active {
   cursor: grabbing; /* Cambia el cursor a "agarrando" cuando se está arrastrando */
 }
