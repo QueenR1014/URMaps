@@ -1,3 +1,5 @@
+// TRADUCCIONES KEVIN (REINA: "LO COMENTÉ PARA PROBAR SIN USAR LA API DE FETCH")
+/*
 document.addEventListener('DOMContentLoaded', function () {
     // Objeto con las traducciones
     const translations = {
@@ -66,3 +68,73 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    let traducciones = [];
+
+    // Cargar el archivo JSON
+    fetch('traducciones.json')
+        .then(response => response.json())
+        .then(data => {
+            traducciones = data;
+            cambiarIdioma('es'); // Idioma por defecto
+        });
+
+    function cambiarIdioma(idioma) {
+        const idiomaMap = {
+            'es': 'Español',
+            'en': 'Inglés',
+            'fr': 'Francés'
+        };
+
+        // Actualizar el texto de los elementos traducidos
+        traducciones.forEach(item => {
+            const element = document.getElementById(item.Clave);
+            if (element) {
+                element.textContent = item[idiomaMap[idioma]];
+            }
+        });
+
+        // Actualizar el texto del botón
+        const languageButton = document.getElementById('languageButton');
+        languageButton.textContent = idioma.toUpperCase();
+    }
+
+    // Manejar el clic en los elementos del menú desplegable
+    document.querySelectorAll('.dropdown-item').forEach(item => {
+        item.addEventListener('click', event => {
+            event.preventDefault(); // Prevenir el comportamiento por defecto del enlace
+            const lang = event.target.getAttribute('data-lang');
+            cambiarIdioma(lang);
+        });
+    });
+});
+*/
+
+//Carga de archivo JSON alterno
+
+var traducciones = null;
+
+function loadTranslation(){
+    //check if the information has already been loaded
+    if(traducciones !== null){
+        return;
+    }
+
+    var xhr = new XMLHttpRequest();
+    xhr.overrideMimeType("application/json");
+    xhr.open('GET', 'data.json', true); // Replace 'data.json' with the path to your JSON file
+    console.log("Flag 1");
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            traducciones = JSON.parse(xhr.responseText);
+            console.log("JSON data loaded:", traducciones);
+            // Any further processing that requires the loaded JSON data can be done here
+        }
+    };
+    xhr.send();
+} 
+
+// Call the function to start loading the JSON data
+loadTranslation();
