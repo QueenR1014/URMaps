@@ -112,9 +112,25 @@ const names = [ ['A', 'Entrada'], ['B', 'Escalera Caldas'],
                 ['I', 'Escaleras Casur'], ['J','Comedor']];
 
 
+const names_dic = {
+    "A": "Entrada",
+    "B": "Escalera Caldas",
+    "C": "Baños Claustro",
+    "D": "Entrada Teatrino",
+    "E": "Síndico",
+    "F": "Aula Mutis",
+    "G": "La Bordadita",
+    "H": "Cuenteros",
+    "I": "Escaleras Casur",
+    "J": "Comedor"
+};
+
 // Map visualization
 
-var map = L.map('map').setView([0, 0], 3);
+var map = L.map('map',{
+    minZoom: 3, // Minimum zoom level
+    maxZoom: 5 // Maximum zoom level
+}).setView([-5, 0], 3);
 var imageMap = 'Mapa/Mapapato.png';
 
 // Load the image overlay with specific bounds
@@ -202,7 +218,7 @@ function visualization(start, end,id) {
     // Crear la polilínea con el color correspondiente al estado del switch
     polyline = L.polyline(polyline_coord, { color: (switchChecked ? "#00A3FF" : "#ba0620"), weight: 5 }).addTo(map);
     
-    polyline.bindTooltip(names[end]);
+    polyline.bindTooltip(names_dic[end]);
 
     polyline.on('mouseover', function(e) {
         this.openTooltip();
