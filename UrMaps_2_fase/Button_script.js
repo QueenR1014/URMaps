@@ -132,7 +132,7 @@ function manejarClic(id) {
     if (end) {
         mostrarCarrusel(id);
         mostrarDescripcion(id);
-        visualization(start, getLetterFromName(end));
+        visualization(start, getLetterFromName(end),id);
     } else {
         console.error(" ", id);
     }

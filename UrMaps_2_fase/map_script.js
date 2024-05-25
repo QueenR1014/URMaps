@@ -130,12 +130,64 @@ L.imageOverlay(imageUrl, imageBounds).addTo(map);
 // Set the maximum bounds of the map to restrict panning
 map.setMaxBounds(imageBounds);
 
-// Add a marker to the map
+// Posibles tamaños de los iconos
+
+const iconSizes = {
+    "S":[30,30],
+    "M":[50,50],
+    "L":[70,70]
+};
+
+//Tamaños para cada visualización de botón
+
+const relationSizes = {
+    "m2": "L",
+    "m3": "L",
+    "m4": "M",
+    "m5": "M",
+    "m6": "L",
+    "m7": "M",
+    "m8": "L",
+    "m9": "S",
+    "m10": "S",
+    "m11": "S"
+};
+
+
+
+//Establecemos el icono con el tamaño mediano
+let Icon = L.icon({
+    iconUrl: 'Amiguito/Pablo.png',
+    iconSize: iconSizes['M']
+});
+//Añadimos el marcador con el icono
+var marker = L.marker([-34, -20], { icon: Icon }).addTo(map);
+
+//Actualizar el tamaño del icono
+function updateMarkerIcon(sizeKey) {
+    if (!iconSizes[sizeKey]) {
+        console.error("Invalid size key provided");
+        return;
+    }
+    
+    // Create a new icon with the updated size
+    let newIcon = L.icon({
+        iconUrl: 'Amiguito/Pablo.png',
+        iconSize: iconSizes[sizeKey]
+    });
+    
+    // Update the marker's icon
+    marker.setIcon(newIcon);
+};
+
+
+console.log("flag");
+
 
 let polyline = null;
 let switchChecked = false; // Estado inicial del switch
 
-function visualization(start, end) {
+function visualization(start, end,id) {
     var path = dijkstra(mapGraph, start, end)["path"];
     var polyline_coord = [];
     
@@ -172,6 +224,8 @@ function visualization(start, end) {
         }
     }, 250);
 
+    //actualización del marcador
+    updateMarkerIcon(relationSizes[id]);
     map.fitBounds(polyline.getBounds());
 }
 
