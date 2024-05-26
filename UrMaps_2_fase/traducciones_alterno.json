@@ -1,6 +1,6 @@
 
 {
-  "Español": {
+  "ES": {
     "Entrada": "Entrada",
     "EscaleraCaldas": "Escalera Caldas",
     "BañosClaustroColonial": "Baños Claustro Colonial",
@@ -32,7 +32,7 @@
     "desc_EscalerasCASUR": "Conecta a CASUR, el edificio con mayor capacidad de la sede, con el resto del complejo del Claustro.",
     "desc_Comedor": "Juntando zonas de bienestar, estudio y esparcimiento, contrasta su estilo como parte del Claustro Republicano con la corriente moderna de la universidad."
   },
-  "Inglés": {
+  "EN": {
     "Entrada": "Entrance",
     "EscaleraCaldas": "Caldas Stairs",
     "BañosClaustroColonial": "Colonial Cloister Bathrooms",
@@ -64,7 +64,7 @@
     "desc_EscalerasCASUR": "It connects CASUR, the building with the largest capacity in the headquarters, with the rest of the Cloister complex.",
     "desc_Comedor": "Bringing together areas of well-being, study, and leisure, it contrasts its style as part of the Republican Cloister with the modern trend of the university."
   },
-  "Francés": {
+  "FR": {
     "Entrada": "Entrée",
     "EscaleraCaldas": "Escaliers Caldas",
     "BañosClaustroColonial": "Salles de bain du Cloître Colonial",
