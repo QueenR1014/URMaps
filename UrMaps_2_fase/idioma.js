@@ -221,5 +221,9 @@ function cambiarLenguaje(lang){
 document.querySelectorAll('#languageSection .dropdown-item').forEach(item =>{
     var lang = item.getAttribute('data-lang');
     console.log("listening");
-    item.addEventListener('click', cambiarLenguaje(lang));
-})
+    item.addEventListener('click', function(){
+        cambiarLenguaje(lang);
+    });
+});
+
+
