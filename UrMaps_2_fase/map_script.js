@@ -128,10 +128,12 @@ const names_dic = {
 // Map visualization
 
 var map = L.map('map',{
-    minZoom: 3, // Minimum zoom level
-    maxZoom: 5 // Maximum zoom level
-}).setView([-5, 0], 3);
+    minZoom: 2, // Minimum zoom level
+    maxZoom: 5  // Maximum zoom level
+}).setView([-5, 0], 2);
 var imageMap = 'Mapa/Mapapato.png';
+
+
 
 // Load the image overlay with specific bounds
 var imageUrl = imageMap;
@@ -178,6 +180,28 @@ let Icon = L.icon({
 });
 //Añadimos el marcador con el icono
 var marker = L.marker([-34, -20], { icon: Icon }).addTo(map);
+
+//set dynamic icon size
+// Listen for the zoomend event
+map.on('zoomend', function() {
+    var zoomLevel = map.getZoom();
+    if(zoomLevel <= 3){
+        let newIcon = L.icon({
+            iconUrl: 'Amiguito/Pablo.png',
+            iconSize: iconSizes['S']
+        });
+
+        marker.setIcon(newIcon);
+    }else if(zoomLevel < 5){
+        let newIcon = L.icon({
+            iconUrl: 'Amiguito/Pablo.png',
+            iconSize: iconSizes['M']
+        });
+
+        marker.setIcon(newIcon);
+    }
+
+});
 
 //Actualizar el tamaño del icono
 function updateMarkerIcon(sizeKey) {
