@@ -32,10 +32,86 @@ let desc_edificios = [
     ["m11", "Juntando zonas de bienestar, estudio y esparcimiento, contrasta su estilo como parte del Claustro Republicano con la corriente moderna de la universidad."]
 ];
 
-// Asignar la letra correspondiente de 'Entrada' a una varibale que nos indica el inicio del recorrido 
-let start = 'A'
+let desc_edificios_fr= [
+    ["m3", "Orné de peintures de l'époque, les escaliers de Caldas reflètent l'héritage historique d'un bâtiment qui fait partie de l'histoire du pays."],
+    ["m4", "Étant l'un des premiers bains pour toutes les personnes dans les universités du pays, il montre comment mélanger l'architecture coloniale et contemporaine."],
+    ["m5", "Faisant partie de l'expansion républicaine de l'université (1898) en tant que salle à manger et rénové en 2021, il relie le Cloître Colonial au Cloître Républicain."],
+    ["m6", "Dans ce coin se trouvent les bureaux de la Sindicatura et du Secrétariat de l'Université, ainsi que le Foyer de la Aula Mutis, un auditorium phare."],
+    ["m7", "Cet auditorium récemment rénové, ainsi que la Aula Maxima, est l'auditorium phare de l'Université. Il accueille les principaux événements institutionnels."],
+    ["m8","C'est l'église du siège du Cloître et un monument national. De plus, les tombes de figures illustres pour l'Université et le pays s'y trouvent."],
+    ["m9","Avec son espace vert et chaleureux, il relie quatre bâtiments importants : le Cloître Républicain, la Casa Rosarista, CASUR et le Edificio Nuevo bâtiment."],
+    ["m10", "Il relie CASUR, le bâtiment avec la plus grande capacité du siège, avec le reste du complexe du Cloître."],
+    ["m11", "Réunissant des zones de bien-être, d'étude et de loisirs, il contraste son style en tant que partie du Cloître Républicain avec la tendance moderne de l'université."]
+];
 
-// Función que nos va ayudar a extraer el valor de la letra (A - J) de los destinos
+let desc_edificios_en = [
+    ["m3", "Adorned with paintings from the era, the Caldas stairs reflect the historical legacy of a building that is part of the country's history."],
+    ["m4", "Being one of the first non-binary bathrooms in the country's universities, it shows how to mix colonial and contemporary architecture."],
+    ["m5", "Part of the university's republican expansion (1898) as a dining hall and renovated in 2021, it connects the Colonial Cloister with the Republican Cloister."],
+    ["m6", "In this corner are the offices of the University's Sindicatura and Secretariat, along with the Foyer of the Aula Mutis, a flagship auditorium."],
+    ["m7", "This recently renovated auditorium, along with the Aula Maxima, is the flagship auditorium of the University. It hosts the main institutional events."],
+    ["m8", "It is the church of the Cloister headquarters and a national monument. In addition, the tombs of illustrious figures for the University and the country are found within it."],
+    ["m9", "With its green and warm space, it connects four important buildings: Republican Cloister, Casa Rosarista, CASUR, and the Edificio Nuevo building."],
+    ["m10", "It connects CASUR, the building with the largest capacity in the headquarters, with the rest of the Cloister complex."],
+    ["m11", "Bringing together areas of well-being, study, and leisure, it contrasts its style as part of the Republican Cloister with the modern trend of the university."]
+];
+
+let currentLanguage = 'es'; // Variable para guardar el idioma seleccionado
+
+// Función para obtener la descripción según el idioma y el id
+function getDescById(id) {
+    let descArray;
+    switch (currentLanguage) {
+        case 'es':
+            descArray = desc_edificios;
+            break;
+        case 'fr':
+            descArray = desc_edificios_fr;
+            break;
+        case 'en':
+            descArray = desc_edificios_en;
+            break;
+        default:
+            descArray = desc_edificios;
+    }
+    
+    for (let i = 0; i < descArray.length; i++) {
+        if (descArray[i][0] === id) {
+            return descArray[i][1];
+        }
+    }
+    return null;
+}
+
+// Función para mostrar la descripción en el idioma seleccionado
+function mostrarDescripcion(id) {
+    const descripcion = getDescById(id);
+    const rectangle = document.querySelector('.descripcion-info');
+
+    if (descripcion !== null) {
+        rectangle.innerHTML = `<h1>${descripcion}</h1>`;
+    }
+}
+
+// Función para cambiar el idioma
+document.querySelectorAll('.dropdown-item').forEach(item => {
+    item.addEventListener('click', event => {
+        event.preventDefault();
+        currentLanguage = event.target.getAttribute('data-lang');
+        const languageButton = document.getElementById('languageButton');
+        languageButton.textContent = currentLanguage.toUpperCase();
+        
+        // Actualizar la descripción si ya hay un lugar seleccionado
+        const currentId = document.querySelector('.rectangle').dataset.currentId;
+        if (currentId) {
+            mostrarDescripcion(currentId);
+        }
+    });
+});
+
+// El resto del código sigue igual
+let start = 'A';
+
 function getLetterFromName(name) {
     for (let i = 0; i < names.length; i++) {
         if (names[i][1] === name) {
@@ -45,7 +121,6 @@ function getLetterFromName(name) {
     return null; 
 }
 
-// Función que nos va ayudar a extraer el nombre asociado a los id´s registrados (m2 - m11) de los destinos
 function getNombreDelBoton(id) {
     for (let i = 0; i < id_s.length; i++) {
         if (id_s[i][0] === id) {
@@ -62,24 +137,6 @@ function getImagesById(id) {
         }
     }
     return null;
-}
-
-function getDescById(id) {
-    for (let i = 0; i < desc_edificios.length; i++) {
-        if (desc_edificios[i][0] === id) {
-            return desc_edificios[i][1];
-        }
-    }
-    return null; 
-}
-
-function mostrarDescripcion(id) {
-    const descripcion = getDescById(id);
-    const rectangle = document.querySelector('.descripcion-info');
-
-    if (descripcion !== null) {
-        rectangle.innerHTML = `<h1>${descripcion}</h1>`;
-    }
 }
 
 function mostrarCarrusel(id) {
@@ -126,24 +183,22 @@ function updateSlidePosition() {
     document.querySelector('.slide-list').style.transform = newTransform;
 }
 
-// Función que nos permitira que se guarde el camino más optimo desde el punto 'A' al destino seleccionado
 function manejarClic(id) {
     const end = getNombreDelBoton(id);
     if (end) {
         mostrarCarrusel(id);
         mostrarDescripcion(id);
-        visualization(start, getLetterFromName(end),id);
+        visualization(start, getLetterFromName(end), id);
     } else {
         console.error(" ", id);
     }
+    // Guardar el id actual para actualizar la descripción al cambiar el idioma
+    document.querySelector('.rectangle').dataset.currentId = id;
 }
 
-// Bucle que nos va ayduar que se pueda ejecutar el evento correspondiente al guiado del mapa
 for (let i = 2; i <= 11; i++) {
     const buttonId = 'm' + i;
     document.getElementById(buttonId).addEventListener("click", function() {
         manejarClic(buttonId);
     });
 }
-
-
