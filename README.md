@@ -4,7 +4,6 @@ A repository for URMaps project, a map-based virtual guide for Universidad del R
 ### Workteam:
 * Camila Camacho
 * Kevin Canchilla
-* Juan S. Carvajal
 * Daniel Morales
 * Laura Ortiz
 * Juan J. Reina
