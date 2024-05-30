@@ -56,7 +56,13 @@ document.addEventListener('DOMContentLoaded', function () {
         const langKey = language === 'en' ? 'Inglés' : language === 'es' ? 'Español' : 'Francés';
         const content = translations[langKey];
         console.log('Contenido cargado para', langKey, ':', content);
-        mostrarDescripcion("m2");
+        //manejo de último botón
+        console.log('El último botón de contenido en ser clickeado es: ',lastClickedButton);
+        if(lastClickedButton == null){
+            mostrarDescripcion("m2");
+        }else{
+        mostrarDescripcion(lastClickedButton);
+        }
         if (content) {
             // Actualiza el texto del botón para reflejar el idioma seleccionado
             languageButton.textContent = language.toUpperCase();
@@ -75,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
             ids.forEach(id => {
                 const element = document.getElementById(id);
                 if (element) {
-                    console.log(id);
+                    
                     element.textContent = content[id];
                 } else {
                     console.warn(`Elemento con ID '${id}' no encontrado.`);

@@ -185,8 +185,11 @@ function updateSlidePosition() {
     document.querySelector('.slide-list').style.transform = newTransform;
 }
 
+var lastClickedButton = null;
+
 function manejarClic(id) {
     const end = getNombreDelBoton(id);
+    lastClickedButton = id;
     if (end) {
         mostrarCarrusel(id);
         mostrarDescripcion(id);
