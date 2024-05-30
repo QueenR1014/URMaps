@@ -33,6 +33,7 @@ let desc_edificios = [
 ];
 
 let desc_edificios_fr= [
+    ["m2", "<p> <b> Crédits: </b> <br> <br> Camila Camacho <br> Kevin Canchilla <br> Daniel Morales <br> Laura Ortiz <br> Juan J. Reina <br> Juan E. Torres <br> Simón Vélez </p>"],
     ["m3", "Orné de peintures de l'époque, les escaliers de Caldas reflètent l'héritage historique d'un bâtiment qui fait partie de l'histoire du pays."],
     ["m4", "Étant l'un des premiers bains pour toutes les personnes dans les universités du pays, il montre comment mélanger l'architecture coloniale et contemporaine."],
     ["m5", "Faisant partie de l'expansion républicaine de l'université (1898) en tant que salle à manger et rénové en 2021, il relie le Cloître Colonial au Cloître Républicain."],
@@ -45,6 +46,7 @@ let desc_edificios_fr= [
 ];
 
 let desc_edificios_en = [
+    ["m2", "<p> <b> Credits: </b> <br> <br> Camila Camacho <br> Kevin Canchilla <br> Daniel Morales <br> Laura Ortiz <br> Juan J. Reina <br> Juan E. Torres <br> Simón Vélez </p>"],
     ["m3", "Adorned with paintings from the era, the Caldas stairs reflect the historical legacy of a building that is part of the country's history."],
     ["m4", "Being one of the first non-binary bathrooms in the country's universities, it shows how to mix colonial and contemporary architecture."],
     ["m5", "Part of the university's republican expansion (1898) as a dining hall and renovated in 2021, it connects the Colonial Cloister with the Republican Cloister."],
@@ -56,7 +58,7 @@ let desc_edificios_en = [
     ["m11", "Bringing together areas of well-being, study, and leisure, it contrasts its style as part of the Republican Cloister with the modern trend of the university."]
 ];
 
-let currentLanguage = 'es'; // Variable para guardar el idioma seleccionado
+var currentLanguage = 'es'; // Variable para guardar el idioma seleccionado
 
 // Función para obtener la descripción según el idioma y el id
 function getDescById(id) {
